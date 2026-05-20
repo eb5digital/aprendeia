@@ -422,6 +422,85 @@ h2 {
   margin-top: 0.6rem;
 }
 
+/* VIDEO GRID */
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.video-card {
+  background: var(--surface2);
+  border: 0.5px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+  text-decoration: none;
+  display: block;
+  transition: border-color 0.2s, transform 0.2s;
+}
+.video-card:hover { border-color: var(--border-accent); transform: translateY(-2px); }
+
+.video-thumb {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  background: linear-gradient(135deg, #0B2318 0%, #0D2E1A 50%, #122B1E 100%);
+  overflow: hidden;
+}
+
+.video-thumb-inner {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+}
+
+.video-play {
+  width: 44px; height: 44px;
+  background: rgba(0,229,160,0.15);
+  border: 1px solid var(--border-accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+  transition: background 0.2s;
+}
+.video-card:hover .video-play { background: rgba(0,229,160,0.25); }
+
+.video-soon {
+  font-size: 0.62rem;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 500;
+  opacity: 0.7;
+}
+
+.video-info {
+  padding: 0.9rem 1rem;
+}
+
+.video-title {
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.35;
+}
+
+@media (max-width: 600px) {
+  .video-grid { grid-template-columns: 1fr; }
+}
+
+@media (min-width: 601px) and (max-width: 780px) {
+  .video-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
 /* CONTACT */
 .contact-row {
   display: flex;
@@ -558,7 +637,7 @@ footer a:hover { color: var(--white); }
   <a href="/" class="logo">aprende<span>ia</span></a>
   <div class="nav-links">
     <a href="#formatos">Formatos</a>
-    <a href="#quien-soy">Quién soy</a>
+    <a href="#videos">Videos</a>
     <a href="#contacto">Contacto</a>
   </div>
 </nav>
@@ -639,9 +718,69 @@ footer a:hover { color: var(--white); }
   </div>
 </section>
 
-<!-- 03 · QUIÉN SOY -->
+<!-- 03 · VIDEOS -->
+<section id="videos">
+  <span class="section-num">03 · Canal de YouTube</span>
+  <h2>Videos y contenidos</h2>
+  <p class="section-sub">
+    Próximamente: videos prácticos sobre IA para PyMEs argentinas. Suscribite al canal para no perderte ninguno.
+  </p>
+
+  <div class="video-grid">
+
+    <a href="https://www.youtube.com/@emibugliolo" target="_blank" rel="noopener" class="video-card">
+      <div class="video-thumb">
+        <div class="video-thumb-inner">
+          <div class="video-play">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+          </div>
+          <span class="video-soon">Próximamente</span>
+        </div>
+      </div>
+      <div class="video-info">
+        <p class="video-title">Cómo implementar IA en tu empresa sin área de tecnología</p>
+      </div>
+    </a>
+
+    <a href="https://www.youtube.com/@emibugliolo" target="_blank" rel="noopener" class="video-card">
+      <div class="video-thumb">
+        <div class="video-thumb-inner">
+          <div class="video-play">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+          </div>
+          <span class="video-soon">Próximamente</span>
+        </div>
+      </div>
+      <div class="video-info">
+        <p class="video-title">El modelo de adopción de IA en 3 fases para PyMEs</p>
+      </div>
+    </a>
+
+    <a href="https://www.youtube.com/@emibugliolo" target="_blank" rel="noopener" class="video-card">
+      <div class="video-thumb">
+        <div class="video-thumb-inner">
+          <div class="video-play">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+          </div>
+          <span class="video-soon">Próximamente</span>
+        </div>
+      </div>
+      <div class="video-info">
+        <p class="video-title">Los 5 errores más comunes al implementar IA en una empresa mediana</p>
+      </div>
+    </a>
+
+  </div>
+
+  <a href="https://www.youtube.com/@emibugliolo" target="_blank" rel="noopener" class="btn-outline" style="display:inline-flex; align-items:center; gap:0.5rem;">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.22 8.22 0 004.84 1.56V6.8a4.85 4.85 0 01-1.07-.11z"/></svg>
+    Ver canal completo →
+  </a>
+</section>
+
+<!-- 04 · QUIÉN SOY -->
 <section id="quien-soy">
-  <span class="section-num">03 · Quién lo da</span>
+  <span class="section-num">04 · Quién lo da</span>
   <h2>Emiliano Bugliolo</h2>
   <div class="inst">
     <img src="emibuglioloperfil.jpg" alt="Emiliano Bugliolo" class="inst-photo">
@@ -660,9 +799,9 @@ footer a:hover { color: var(--white); }
   </div>
 </section>
 
-<!-- 04 · CONTACTO -->
+<!-- 05 · CONTACTO -->
 <section id="contacto">
-  <span class="section-num">04 · Contacto</span>
+  <span class="section-num">05 · Contacto</span>
   <h2>¿Querés saber más?</h2>
   <p class="section-sub">Para consultas sobre capacitaciones, mentorías, workshops o simplemente para charlar sobre cómo implementar IA en tu empresa.</p>
 
