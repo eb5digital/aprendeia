@@ -577,6 +577,45 @@ footer a:hover { color: var(--white); }
   box-shadow: 0 6px 28px rgba(37,211,102,0.5);
 }
 
+/* ── DOOPLER NATIVE WRAP ── */
+.dp-native-wrap {
+  background: var(--surface);
+  border: 0.5px solid var(--border-accent);
+  border-radius: 12px;
+  padding: 1.75rem;
+}
+
+.dp-native-wrap .unlock-title {
+  font-family: 'Nunito', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 1.25rem;
+}
+
+/* Ocultar título/subtítulo propios de Doopler — los reemplazamos con el nuestro */
+.dp-native-wrap [data-dp-form] h1,
+.dp-native-wrap [data-dp-form] h2,
+.dp-native-wrap [data-dp-form] h3,
+.dp-native-wrap [data-dp-form] h4,
+.dp-native-wrap [data-dp-form] > div > div > p,
+.dp-native-wrap [data-dp-form] > div > p { display: none !important; }
+
+/* Contenedor externo del form Doopler — forzar transparente */
+.dp-native-wrap [data-dp-form] > *,
+.dp-native-wrap [data-dp-form] > * > * {
+  background: transparent !important;
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* Todo lo que viene DESPUÉS del <form> (branding Doopler) — ocultar */
+.dp-native-wrap [data-dp-form] form ~ * { display: none !important; }
+.dp-native-wrap [data-dp-form] form + * { display: none !important; }
+
 /* ── DOOPLER FORM OVERRIDE ── */
 [data-dp-form],
 [data-dp-form] > *,
@@ -1078,32 +1117,11 @@ footer a:hover { color: var(--white); }
     </div>
   </div>
 
-  <!-- Formulario de desbloqueo -->
-  <div class="unlock-box" id="unlock-box">
+  <!-- Doopler nativo -->
+  <div class="dp-native-wrap">
     <p class="unlock-title">Dejá tu nombre y email para recibir los recursos</p>
-    <form class="unlock-form" id="unlock-form" onsubmit="handleUnlock(event)">
-      <input type="text" id="u-nombre" placeholder="Tu nombre" class="form-input" required autocomplete="given-name">
-      <input type="email" id="u-email" placeholder="tu@email.com" class="form-input" required autocomplete="email">
-      <button type="submit" class="btn" id="unlock-btn" style="cursor:pointer; border:none; width:100%; justify-content:center;">
-        Desbloquear recursos →
-      </button>
-    </form>
-    <p class="form-note" style="margin-top:0.75rem;">Sin spam. Te aviso cuando sumo nuevos recursos.</p>
-  </div>
-
-  <!-- Estado de éxito -->
-  <div class="unlock-success" id="unlock-success" style="display:none;">
-    <div style="font-size:2rem; margin-bottom:0.75rem;">✅</div>
-    <p style="font-family:'Nunito',sans-serif; font-weight:700; font-size:1.1rem; color:var(--white); margin-bottom:0.5rem;">¡Listo! Ya podés descargar la Hoja de Ruta.</p>
-    <p style="font-size:0.85rem; color:var(--muted); margin-bottom:1.25rem;">También te la enviamos por email. Si no aparece, revisá spam.</p>
-    <a href="/metodo-onda-hoja-de-ruta.pdf" download class="btn" style="display:inline-flex;">
-      Descargar Hoja de Ruta → Método ONDA
-    </a>
-  </div>
-
-  <!-- Doopler offscreen (se renderiza completo pero invisible) -->
-  <div id="dp-hidden-form" style="position:fixed; left:-9999px; top:-9999px; width:400px; visibility:hidden;">
     <div data-dp-form="G5VvMx%2bpMg9qnsGzLxUUuA%3d%3d"></div>
+    <p class="form-note">Sin spam. Te aviso cuando sumo nuevos recursos.</p>
   </div>
 </section>
 
@@ -1200,50 +1218,6 @@ footer a:hover { color: var(--white); }
 }
 </style>
 
-<script>
-function handleUnlock(e) {
-  e.preventDefault();
-  const nombre = document.getElementById('u-nombre').value;
-  const email = document.getElementById('u-email').value;
-  const btn = document.getElementById('unlock-btn');
-  btn.textContent = 'Enviando...';
-  btn.disabled = true;
-
-  function trySubmitDoopler() {
-    try {
-      const dpWrapper = document.getElementById('dp-hidden-form');
-      const dpEmail  = dpWrapper.querySelector('input[type="email"]');
-      const dpNombre = dpWrapper.querySelector('input[type="text"]');
-      const dpSubmit = dpWrapper.querySelector('button[type="submit"], input[type="submit"]');
-
-      if (dpEmail)  { dpEmail.value  = email;  dpEmail.dispatchEvent(new Event('input', {bubbles:true})); }
-      if (dpNombre) { dpNombre.value = nombre; dpNombre.dispatchEvent(new Event('input', {bubbles:true})); }
-
-      // Aceptar checkbox de privacidad si existe
-      const dpCheck = dpWrapper.querySelector('input[type="checkbox"]');
-      if (dpCheck && !dpCheck.checked) dpCheck.click();
-
-      if (dpSubmit) {
-        dpSubmit.removeAttribute('disabled');
-        dpSubmit.click();
-        return true;
-      }
-    } catch(err) {}
-    return false;
-  }
-
-  // Primer intento inmediato, segundo a 800ms por si el widget carga tarde
-  if (!trySubmitDoopler()) {
-    setTimeout(trySubmitDoopler, 800);
-  }
-
-  // Mostrar éxito siempre a 1s
-  setTimeout(() => {
-    document.getElementById('unlock-box').style.display = 'none';
-    document.getElementById('unlock-success').style.display = 'block';
-  }, 1000);
-}
-</script>
 
 <!-- 06 · CONTACTO -->
 <section id="contacto">
