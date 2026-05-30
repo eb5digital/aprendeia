@@ -1101,8 +1101,10 @@ footer a:hover { color: var(--white); }
     </a>
   </div>
 
-  <!-- Doopler oculto (recibe los datos) -->
-  <div data-dp-form="G5VvMx%2bpMg9qnsGzLxUUuA%3d%3d" id="dp-hidden-form" style="position:absolute; opacity:0; pointer-events:none; height:0; overflow:hidden;"></div>
+  <!-- Doopler offscreen (se renderiza completo pero invisible) -->
+  <div id="dp-hidden-form" style="position:fixed; left:-9999px; top:-9999px; width:400px; visibility:hidden;">
+    <div data-dp-form="G5VvMx%2bpMg9qnsGzLxUUuA%3d%3d"></div>
+  </div>
 </section>
 
 <style>
@@ -1207,22 +1209,39 @@ function handleUnlock(e) {
   btn.textContent = 'Enviando...';
   btn.disabled = true;
 
-  // Intentar inyectar en el form de Doopler
-  setTimeout(() => {
+  function trySubmitDoopler() {
     try {
-      const dpForm = document.getElementById('dp-hidden-form');
-      const dpEmail = dpForm.querySelector('input[type="email"]');
-      const dpNombre = dpForm.querySelector('input[type="text"]');
-      const dpSubmit = dpForm.querySelector('button[type="submit"], input[type="submit"]');
-      if (dpEmail) dpEmail.value = email;
-      if (dpNombre) dpNombre.value = nombre;
-      if (dpSubmit) dpSubmit.click();
-    } catch(err) {}
+      const dpWrapper = document.getElementById('dp-hidden-form');
+      const dpEmail  = dpWrapper.querySelector('input[type="email"]');
+      const dpNombre = dpWrapper.querySelector('input[type="text"]');
+      const dpSubmit = dpWrapper.querySelector('button[type="submit"], input[type="submit"]');
 
-    // Mostrar éxito siempre
+      if (dpEmail)  { dpEmail.value  = email;  dpEmail.dispatchEvent(new Event('input', {bubbles:true})); }
+      if (dpNombre) { dpNombre.value = nombre; dpNombre.dispatchEvent(new Event('input', {bubbles:true})); }
+
+      // Aceptar checkbox de privacidad si existe
+      const dpCheck = dpWrapper.querySelector('input[type="checkbox"]');
+      if (dpCheck && !dpCheck.checked) dpCheck.click();
+
+      if (dpSubmit) {
+        dpSubmit.removeAttribute('disabled');
+        dpSubmit.click();
+        return true;
+      }
+    } catch(err) {}
+    return false;
+  }
+
+  // Primer intento inmediato, segundo a 800ms por si el widget carga tarde
+  if (!trySubmitDoopler()) {
+    setTimeout(trySubmitDoopler, 800);
+  }
+
+  // Mostrar éxito siempre a 1s
+  setTimeout(() => {
     document.getElementById('unlock-box').style.display = 'none';
     document.getElementById('unlock-success').style.display = 'block';
-  }, 600);
+  }, 1000);
 }
 </script>
 
