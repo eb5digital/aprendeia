@@ -7,7 +7,9 @@
 
 <!-- SEO -->
 <meta name="description" content="Aprendeia: capacitaciones online, mentorías y workshops presenciales de inteligencia artificial para dueños y directivos de PyMEs argentinas. Sin tecnicismos.">
+<meta name="keywords" content="capacitación IA PyMEs Argentina, mentoría inteligencia artificial empresas, workshop IA Buenos Aires, aprender IA sin tecnicismos, adopción IA empresa, Método ONDA IA, capacitación IA online negocios, implementar IA empresa familiar Argentina">
 <meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.aprendeia.com.ar/">
 
 <!-- Open Graph (WhatsApp, LinkedIn, Facebook) -->
 <meta property="og:type" content="website">
@@ -603,12 +605,51 @@ footer a:hover { color: var(--white); }
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "EducationalOrganization",
+      "@id": "https://www.aprendeia.com.ar/#aprendeia",
+      "name": "Aprendeia",
+      "description": "Plataforma de capacitaciones, mentorías y workshops de inteligencia artificial para dueños y directivos de PyMEs argentinas. Sin tecnicismos, con enfoque práctico y estratégico.",
+      "url": "https://www.aprendeia.com.ar/",
+      "logo": "https://www.aprendeia.com.ar/og-image.png",
+      "founder": { "@id": "https://www.aprendeia.com.ar/#emiliano" },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Buenos Aires",
+        "addressRegion": "CABA",
+        "addressCountry": "AR"
+      },
+      "areaServed": [
+        { "@type": "Country", "name": "Argentina" },
+        { "@type": "Country", "name": "México" },
+        { "@type": "Country", "name": "Colombia" },
+        { "@type": "Country", "name": "Chile" }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Formatos de capacitación en IA",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Course", "name": "Capacitaciones online de IA para equipos", "description": "Formatos en vivo o grabados para equipos completos o áreas específicas." } },
+          { "@type": "Offer", "itemOffered": { "@type": "Course", "name": "Mentoría individual de adopción de IA", "description": "Diagnóstico, hoja de ruta personalizada y acompañamiento en la implementación." } },
+          { "@type": "Offer", "itemOffered": { "@type": "Course", "name": "Workshop presencial de IA para PyMEs", "description": "Jornada intensiva en Buenos Aires con diagnóstico y plan de acción concreto." } }
+        ]
+      },
+      "sameAs": ["https://www.emibugliolo.com/"]
+    },
+    {
       "@type": "Person",
       "@id": "https://www.aprendeia.com.ar/#emiliano",
       "name": "Emiliano Bugliolo",
-      "jobTitle": "Consultor en estrategia, IA y profesionalización de PyMEs",
+      "alternateName": "Emi Bugliolo",
+      "jobTitle": "Consultor de Estrategia e IA para PyMEs",
+      "description": "Socio operativo de empresa familiar con más de 70 años en el mercado. Más de 20 años en negocios reales. Creador del Método ONDA y del podcast Desde el Garage.",
       "url": "https://www.emibugliolo.com/",
-      "sameAs": ["https://www.linkedin.com/in/emilianobugliolo/", "https://www.emibugliolo.com/"]
+      "sameAs": [
+        "https://www.emibugliolo.com/",
+        "https://www.linkedin.com/in/emilianobugliolo/",
+        "https://instagram.com/emibugliolo",
+        "https://youtube.com/@emibugliolo",
+        "https://tiktok.com/@emibugliolo"
+      ]
     },
     {
       "@type": "FAQPage",
@@ -618,7 +659,7 @@ footer a:hover { color: var(--white); }
           "name": "¿Para quién son las capacitaciones y mentorías de Aprendeia?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Para dueños, socios, gerentes y directivos de empresas y PyMEs en Argentina que quieren implementar inteligencia artificial en su operación real."
+            "text": "Para dueños, socios, gerentes y directivos de empresas y PyMEs en Argentina que quieren implementar inteligencia artificial en su operación real, sin necesitar conocimientos técnicos ni un equipo de tecnología."
           }
         },
         {
@@ -626,7 +667,23 @@ footer a:hover { color: var(--white); }
           "name": "¿Necesito saber programación para acceder a estas capacitaciones?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No. El enfoque es organizacional y estratégico. Se trabaja el modelo de adopción cultural y estructural de la IA en la empresa, no aspectos técnicos."
+            "text": "No. El enfoque es organizacional y estratégico. Se trabaja el modelo de adopción cultural y estructural de la IA en la empresa, no aspectos técnicos de programación."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué es el Método ONDA?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "El Método ONDA es la metodología de adopción de IA para empresas creada por Emiliano Bugliolo. Guía a los dueños y equipos a través de un proceso estructurado para implementar inteligencia artificial de forma real y sostenible, sin depender de un equipo técnico."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Dónde se realizan los workshops presenciales de Aprendeia?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Los workshops presenciales se realizan en Buenos Aires (barrio de Recoleta). Las capacitaciones online y mentorías están disponibles de forma remota para toda LATAM."
           }
         }
       ]
@@ -728,7 +785,7 @@ footer a:hover { color: var(--white); }
   <span class="section-num">03 · Canal de YouTube</span>
   <h2>Videos y contenidos</h2>
   <p class="section-sub">
-    Próximamente: videos prácticos sobre IA para PyMEs argentinas. Suscribite al canal para no perderte ninguno.
+    Conversaciones reales sobre IA, negocios y lo que nadie te cuenta. Nuevos episodios cada semana.
   </p>
 
   <div class="video-grid">
@@ -775,8 +832,6 @@ footer a:hover { color: var(--white); }
       </div>
     </a>
 
-  </div>
-
     <a href="https://www.youtube.com/watch?v=_0q1_nBAGys" target="_blank" rel="noopener" class="video-card">
       <div class="video-thumb" style="background:none;">
         <img src="https://img.youtube.com/vi/_0q1_nBAGys/maxresdefault.jpg" alt="Cómo hacer que tu negocio sea visible en Google y ganar más clientes" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
@@ -790,6 +845,8 @@ footer a:hover { color: var(--white); }
         <p class="video-title">Cómo hacer que tu negocio sea visible y atraer más clientes con IA</p>
       </div>
     </a>
+
+  </div>
 
   <a href="https://www.youtube.com/@emibugliolo" target="_blank" rel="noopener" class="btn-outline" style="display:inline-flex; align-items:center; gap:0.5rem;">
     <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.22 8.22 0 004.84 1.56V6.8a4.85 4.85 0 01-1.07-.11z"/></svg>
@@ -818,9 +875,41 @@ footer a:hover { color: var(--white); }
   </div>
 </section>
 
-<!-- 05 · CONTACTO -->
+<!-- 05 · HOJA DE RUTA -->
+<section id="hoja-de-ruta">
+  <span class="section-num">05 · Recurso gratuito</span>
+  <h2>Antes de escribirme, llevate esto.</h2>
+  <p class="section-sub">
+    La <strong style="color:var(--white)">Hoja de Ruta para adoptar IA en tu PyME</strong> — el punto de partida que le doy a cada empresa antes de arrancar con el Método ONDA.
+  </p>
+  <form
+    action="https://formspree.io/f/hola@emibugliolo.com"
+    method="POST"
+    class="newsletter-form"
+    onsubmit="handleFormSubmit(event)"
+  >
+    <input type="text" name="nombre" placeholder="Tu nombre" class="form-input" required autocomplete="given-name">
+    <input type="email" name="email" placeholder="Tu email" class="form-input" required autocomplete="email">
+    <button type="submit" class="btn" style="cursor:pointer; border:none;">Quiero la Hoja de Ruta →</button>
+  </form>
+  <p class="form-note">La recibís en tu email al instante. Sin spam, sin compromiso.</p>
+</section>
+
+<script>
+function handleFormSubmit(e) {
+  e.preventDefault();
+  const form = e.target;
+  const nombre = form.nombre.value;
+  const email = form.email.value;
+  const msg = encodeURIComponent(`Hola Emiliano, quiero la Hoja de Ruta para adoptar IA en mi PyME.\n\nNombre: ${nombre}\nEmail: ${email}`);
+  window.open(`https://wa.me/5491125534340?text=${msg}`, '_blank');
+  form.reset();
+}
+</script>
+
+<!-- 06 · CONTACTO -->
 <section id="contacto">
-  <span class="section-num">05 · Contacto</span>
+  <span class="section-num">06 · Contacto</span>
   <h2>Empezá a cruzar el puente.</h2>
   <p class="section-sub">Si querés cambiar el chip y empezar a implementar IA en tu negocio de manera simple, escribime. Sin compromiso.</p>
 
