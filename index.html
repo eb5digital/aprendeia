@@ -32,6 +32,8 @@
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230A0A0A'/><text x='4' y='23' font-family='Arial' font-weight='900' font-size='20' fill='%2300E5A0'>a</text><circle cx='24' cy='10' r='4' fill='%2300E5A0'/><circle cx='24' cy='10' r='2' fill='%230A0A0A'/></svg>">
 
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700;800&family=Nunito:wght@400;600;700;800;900&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<script src="https://cdn.fromdoppler.com/formgenerator/latest/vendor.js?26937409"></script>
+<link rel="stylesheet" href="https://cdn.fromdoppler.com/formgenerator/latest/styles.css?26937409" />
 
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -882,30 +884,9 @@ footer a:hover { color: var(--white); }
   <p class="section-sub">
     La <strong style="color:var(--white)">Hoja de Ruta para adoptar IA en tu PyME</strong> — el punto de partida que le doy a cada empresa antes de arrancar con el Método ONDA.
   </p>
-  <form
-    action="https://formspree.io/f/hola@emibugliolo.com"
-    method="POST"
-    class="newsletter-form"
-    onsubmit="handleFormSubmit(event)"
-  >
-    <input type="text" name="nombre" placeholder="Tu nombre" class="form-input" required autocomplete="given-name">
-    <input type="email" name="email" placeholder="Tu email" class="form-input" required autocomplete="email">
-    <button type="submit" class="btn" style="cursor:pointer; border:none;">Quiero la Hoja de Ruta →</button>
-  </form>
-  <p class="form-note">La recibís en tu email al instante. Sin spam, sin compromiso.</p>
+  <div data-dp-form="G5VvMx%2bpMg9qnsGzLxUUuA%3d%3d"></div>
+  <p class="form-note">Sin spam, sin compromiso.</p>
 </section>
-
-<script>
-function handleFormSubmit(e) {
-  e.preventDefault();
-  const form = e.target;
-  const nombre = form.nombre.value;
-  const email = form.email.value;
-  const msg = encodeURIComponent(`Hola Emiliano, quiero la Hoja de Ruta para adoptar IA en mi PyME.\n\nNombre: ${nombre}\nEmail: ${email}`);
-  window.open(`https://wa.me/5491125534340?text=${msg}`, '_blank');
-  form.reset();
-}
-</script>
 
 <!-- 06 · CONTACTO -->
 <section id="contacto">
