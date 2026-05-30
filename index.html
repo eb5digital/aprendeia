@@ -580,10 +580,12 @@ footer a:hover { color: var(--white); }
 /* ── DOOPLER FORM OVERRIDE ── */
 [data-dp-form],
 [data-dp-form] > *,
+[data-dp-form] > * > *,
 .dp-form-wrapper,
 .dp-form-container,
 .dp-form-basic,
-.dp-form {
+.dp-form,
+.dp-form-basic > *:not(.dp-form-field):not(.dp-btn-send):not(button):not(input):not(label) {
   background: transparent !important;
   background-color: transparent !important;
   border: none !important;
@@ -592,6 +594,36 @@ footer a:hover { color: var(--white); }
   margin: 0 !important;
   font-family: 'DM Sans', sans-serif !important;
   color: var(--white) !important;
+}
+
+/* Ocultar footer Doopler: branding, share, redes sociales */
+[data-dp-form] [class*="legality"],
+[data-dp-form] [class*="share"],
+[data-dp-form] [class*="social"],
+[data-dp-form] [class*="footer"],
+[data-dp-form] [class*="brand"],
+[data-dp-form] [class*="logo"],
+[data-dp-form] [class*="policy"],
+[data-dp-form] [class*="privac"],
+[data-dp-form] hr,
+[data-dp-form] .dp-footer,
+[data-dp-form] .dp-legality,
+[data-dp-form] .dp-share,
+[data-dp-form] .dp-social,
+[data-dp-form] img[src*="doppler"],
+[data-dp-form] img[src*="fromdoppler"] {
+  display: none !important;
+}
+
+/* Fuerza fondo oscuro en todos los divs internos */
+[data-dp-form] div,
+[data-dp-form] form,
+[data-dp-form] section,
+[data-dp-form] article {
+  background: transparent !important;
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
 }
 
 /* Inputs */
@@ -626,6 +658,19 @@ footer a:hover { color: var(--white); }
 [data-dp-form] input:focus,
 .dp-form input:focus {
   border-color: var(--border-accent) !important;
+}
+
+/* Checkbox */
+[data-dp-form] input[type="checkbox"] {
+  accent-color: var(--accent) !important;
+  width: 14px !important;
+  height: 14px !important;
+}
+
+[data-dp-form] input[type="checkbox"] + label,
+[data-dp-form] .dp-checkbox-label {
+  font-size: 0.78rem !important;
+  color: var(--muted) !important;
 }
 
 /* Labels */
@@ -1001,16 +1046,182 @@ footer a:hover { color: var(--white); }
   </div>
 </section>
 
-<!-- 05 · HOJA DE RUTA -->
+<!-- 05 · RECURSOS GRATIS -->
 <section id="hoja-de-ruta">
-  <span class="section-num">05 · Recurso gratuito</span>
-  <h2>Antes de escribirme, llevate esto.</h2>
+  <span class="section-num">05 · Recursos gratuitos</span>
+  <h2>Desbloqueá los recursos.</h2>
   <p class="section-sub">
-    La <strong style="color:var(--white)">Hoja de Ruta para adoptar IA en tu PyME</strong> — el punto de partida que le doy a cada empresa antes de arrancar con el Método ONDA.
+    Completá el formulario y accedé a la <strong style="color:var(--white)">Hoja de Ruta del Método ONDA</strong> y a los próximos recursos que voy sumando.
   </p>
-  <div data-dp-form="G5VvMx%2bpMg9qnsGzLxUUuA%3d%3d"></div>
-  <p class="form-note">Sin spam, sin compromiso.</p>
+
+  <!-- Grid de recursos bloqueados -->
+  <div class="resources-grid">
+    <div class="resource-card unlocked">
+      <div class="resource-icon">📋</div>
+      <div class="resource-name">Hoja de Ruta — Método ONDA</div>
+      <div class="resource-badge">Disponible</div>
+    </div>
+    <div class="resource-card locked">
+      <div class="resource-icon">🔒</div>
+      <div class="resource-name">Checklist de Diagnóstico PyME</div>
+      <div class="resource-badge coming">Próximamente</div>
+    </div>
+    <div class="resource-card locked">
+      <div class="resource-icon">🔒</div>
+      <div class="resource-name">Guía de Automatización Mínima</div>
+      <div class="resource-badge coming">Próximamente</div>
+    </div>
+    <div class="resource-card locked">
+      <div class="resource-icon">🔒</div>
+      <div class="resource-name">Prompts para Dueños de PyMEs</div>
+      <div class="resource-badge coming">Próximamente</div>
+    </div>
+  </div>
+
+  <!-- Formulario de desbloqueo -->
+  <div class="unlock-box" id="unlock-box">
+    <p class="unlock-title">Dejá tu nombre y email para recibir los recursos</p>
+    <form class="unlock-form" id="unlock-form" onsubmit="handleUnlock(event)">
+      <input type="text" id="u-nombre" placeholder="Tu nombre" class="form-input" required autocomplete="given-name">
+      <input type="email" id="u-email" placeholder="tu@email.com" class="form-input" required autocomplete="email">
+      <button type="submit" class="btn" id="unlock-btn" style="cursor:pointer; border:none; width:100%; justify-content:center;">
+        Desbloquear recursos →
+      </button>
+    </form>
+    <p class="form-note" style="margin-top:0.75rem;">Sin spam. Te aviso cuando sumo nuevos recursos.</p>
+  </div>
+
+  <!-- Estado de éxito -->
+  <div class="unlock-success" id="unlock-success" style="display:none;">
+    <div style="font-size:2rem; margin-bottom:0.75rem;">✅</div>
+    <p style="font-weight:600; color:var(--white); margin-bottom:0.5rem;">¡Listo! Revisá tu email.</p>
+    <p style="font-size:0.88rem; color:var(--muted);">Te mandamos la Hoja de Ruta del Método ONDA. Si no aparece, revisá spam.</p>
+  </div>
+
+  <!-- Doopler oculto (recibe los datos) -->
+  <div data-dp-form="G5VvMx%2bpMg9qnsGzLxUUuA%3d%3d" id="dp-hidden-form" style="position:absolute; opacity:0; pointer-events:none; height:0; overflow:hidden;"></div>
 </section>
+
+<style>
+.resources-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.85rem;
+  margin-bottom: 1.75rem;
+}
+
+.resource-card {
+  background: var(--surface);
+  border: 0.5px solid var(--border);
+  border-radius: 10px;
+  padding: 1.25rem 1.25rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+  transition: border-color 0.2s;
+}
+
+.resource-card.unlocked {
+  border-color: var(--border-accent);
+  background: linear-gradient(135deg, rgba(0,229,160,0.06) 0%, var(--surface) 100%);
+}
+
+.resource-card.locked {
+  opacity: 0.55;
+}
+
+.resource-icon {
+  font-size: 1.4rem;
+}
+
+.resource-name {
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.3;
+}
+
+.resource-badge {
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: var(--accent-dim);
+  border: 0.5px solid var(--border-accent);
+  border-radius: 100px;
+  padding: 0.2rem 0.65rem;
+}
+
+.resource-badge.coming {
+  color: var(--muted);
+  background: var(--surface2);
+  border-color: var(--border);
+}
+
+.unlock-box {
+  background: var(--surface);
+  border: 0.5px solid var(--border-accent);
+  border-radius: 12px;
+  padding: 1.75rem;
+}
+
+.unlock-title {
+  font-family: 'Nunito', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 1.25rem;
+}
+
+.unlock-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.unlock-success {
+  background: var(--surface);
+  border: 0.5px solid var(--border-accent);
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .resources-grid { grid-template-columns: 1fr; }
+}
+</style>
+
+<script>
+function handleUnlock(e) {
+  e.preventDefault();
+  const nombre = document.getElementById('u-nombre').value;
+  const email = document.getElementById('u-email').value;
+  const btn = document.getElementById('unlock-btn');
+  btn.textContent = 'Enviando...';
+  btn.disabled = true;
+
+  // Intentar inyectar en el form de Doopler
+  setTimeout(() => {
+    try {
+      const dpForm = document.getElementById('dp-hidden-form');
+      const dpEmail = dpForm.querySelector('input[type="email"]');
+      const dpNombre = dpForm.querySelector('input[type="text"]');
+      const dpSubmit = dpForm.querySelector('button[type="submit"], input[type="submit"]');
+      if (dpEmail) dpEmail.value = email;
+      if (dpNombre) dpNombre.value = nombre;
+      if (dpSubmit) dpSubmit.click();
+    } catch(err) {}
+
+    // Mostrar éxito siempre
+    document.getElementById('unlock-box').style.display = 'none';
+    document.getElementById('unlock-success').style.display = 'block';
+  }, 600);
+}
+</script>
 
 <!-- 06 · CONTACTO -->
 <section id="contacto">
