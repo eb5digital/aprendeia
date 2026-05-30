@@ -577,6 +577,130 @@ footer a:hover { color: var(--white); }
   box-shadow: 0 6px 28px rgba(37,211,102,0.5);
 }
 
+/* ── DOOPLER FORM OVERRIDE ── */
+[data-dp-form],
+[data-dp-form] > *,
+.dp-form-wrapper,
+.dp-form-container,
+.dp-form-basic,
+.dp-form {
+  background: transparent !important;
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  font-family: 'DM Sans', sans-serif !important;
+  color: var(--white) !important;
+}
+
+/* Inputs */
+[data-dp-form] input[type="text"],
+[data-dp-form] input[type="email"],
+[data-dp-form] input[type="tel"],
+[data-dp-form] select,
+[data-dp-form] textarea,
+.dp-form input[type="text"],
+.dp-form input[type="email"],
+.dp-form select {
+  background: var(--surface2) !important;
+  background-color: var(--surface2) !important;
+  border: 0.5px solid var(--border) !important;
+  border-radius: 6px !important;
+  padding: 0.75rem 1rem !important;
+  color: var(--white) !important;
+  font-family: 'DM Sans', sans-serif !important;
+  font-size: 0.9rem !important;
+  font-weight: 300 !important;
+  width: 100% !important;
+  outline: none !important;
+  box-shadow: none !important;
+  transition: border-color 0.2s !important;
+}
+
+[data-dp-form] input::placeholder,
+.dp-form input::placeholder {
+  color: var(--muted) !important;
+}
+
+[data-dp-form] input:focus,
+.dp-form input:focus {
+  border-color: var(--border-accent) !important;
+}
+
+/* Labels */
+[data-dp-form] label,
+.dp-form label {
+  color: var(--muted) !important;
+  font-size: 0.8rem !important;
+  font-weight: 300 !important;
+  margin-bottom: 0.35rem !important;
+  display: block !important;
+}
+
+/* Submit button */
+[data-dp-form] button[type="submit"],
+[data-dp-form] input[type="submit"],
+.dp-form button[type="submit"],
+.dp-form input[type="submit"],
+.dp-btn-send,
+.dp-button {
+  background: var(--accent) !important;
+  background-color: var(--accent) !important;
+  color: var(--black) !important;
+  border: none !important;
+  border-radius: 4px !important;
+  padding: 0.8rem 1.75rem !important;
+  font-family: 'DM Sans', sans-serif !important;
+  font-size: 0.92rem !important;
+  font-weight: 500 !important;
+  cursor: pointer !important;
+  transition: opacity 0.2s !important;
+  width: auto !important;
+  display: inline-flex !important;
+  align-items: center !important;
+}
+
+[data-dp-form] button[type="submit"]:hover,
+.dp-form button[type="submit"]:hover,
+.dp-btn-send:hover {
+  opacity: 0.88 !important;
+}
+
+/* Field groups / rows */
+[data-dp-form] .dp-form-field,
+[data-dp-form] .field-item,
+[data-dp-form] .form-group,
+[data-dp-form] fieldset {
+  background: transparent !important;
+  border: none !important;
+  margin-bottom: 0.85rem !important;
+  padding: 0 !important;
+}
+
+/* Error / success messages */
+[data-dp-form] .dp-form-message,
+[data-dp-form] .dp-message-success,
+[data-dp-form] .dp-message-error {
+  font-size: 0.85rem !important;
+  font-weight: 300 !important;
+  padding: 0.75rem 1rem !important;
+  border-radius: 6px !important;
+  margin-top: 0.75rem !important;
+}
+
+[data-dp-form] .dp-message-success {
+  background: rgba(0,229,160,0.12) !important;
+  color: var(--accent) !important;
+  border: 0.5px solid var(--border-accent) !important;
+}
+
+[data-dp-form] .dp-message-error {
+  background: rgba(255,80,80,0.1) !important;
+  color: #ff6b6b !important;
+  border: 0.5px solid rgba(255,80,80,0.3) !important;
+}
+
 /* RESPONSIVE */
 @media (max-width: 600px) {
   body { padding: 0 1.1rem; }
