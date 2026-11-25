@@ -37,3 +37,10 @@ create or replace view public.leads_recientes with (security_invoker = true) as
          nombre, email, telefono, origen, utm_source, estado, notas
   from public.leads order by created_at desc;
 revoke all on public.leads_recientes from anon, authenticated;
+
+-- 002: ping para el keepalive diario (Vercel Cron → /api/keepalive)
+create or replace function public.ping()
+returns text language sql stable security invoker set search_path = ''
+as $$ select 'ok'::text $$;
+revoke all on function public.ping() from public;
+grant execute on function public.ping() to anon;

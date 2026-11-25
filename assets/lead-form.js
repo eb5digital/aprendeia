@@ -3,8 +3,8 @@
    La tabla solo permite INSERTAR (RLS); nadie puede leer los contactos desde el sitio. */
 (function () {
   var CONFIG = {
-    url: "__SUPABASE_URL__",
-    key: "__SUPABASE_PUBLISHABLE_KEY__",
+    url: "https://tglzjejpyipxundiszrv.supabase.co",
+    key: "sb_publishable_0UzXjBrPsoGPMmjnqPzSQA_KHRw-XQC",
     table: "leads"
   };
 
@@ -55,7 +55,6 @@
       method: "POST",
       headers: {
         "apikey": CONFIG.key,
-        "Authorization": "Bearer " + CONFIG.key,
         "Content-Type": "application/json",
         "Prefer": "return=minimal"
       },
