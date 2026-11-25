@@ -1,1292 +1,769 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-AR">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Aprendéia | Capacitación en IA para PyMEs Argentinas — Método ONDA</title>
-
-<!-- SEO -->
-<meta name="description" content="Aprendéia te ayuda a entender y aplicar inteligencia artificial en tu PyME familiar, sin tecnicismos. Capacitaciones, mentoría y talleres con el Método ONDA de Emiliano Bugliolo.">
-<meta name="keywords" content="capacitación IA PyMEs Argentina, mentoría inteligencia artificial empresas, workshop IA Buenos Aires, aprender IA sin tecnicismos, adopción IA empresa, Método ONDA IA, capacitación IA online negocios, implementar IA empresa familiar Argentina">
-<meta name="robots" content="index, follow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aprendeia · Charlas y capacitaciones online de IA para empresas · Emiliano Bugliolo</title>
+<meta name="description" content="Aprendeia ofrece charlas y capacitaciones online de inteligencia artificial para dueños, directivos y equipos de PyMEs y empresas familiares de habla hispana. Dictadas por Emiliano Bugliolo, creador del Método ONDA.">
+<meta name="author" content="Emiliano Bugliolo">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
 <link rel="canonical" href="https://www.aprendeia.com.ar/">
+<link rel="alternate" type="text/plain" href="https://www.aprendeia.com.ar/llms.txt" title="LLMs.txt">
+<meta name="theme-color" content="#07090A">
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "name": "Aprendéia",
-  "serviceType": "Capacitación y mentoría en inteligencia artificial para PyMEs",
-  "provider": {
-    "@type": "Person",
-    "name": "Emiliano Bugliolo",
-    "url": "https://www.emibugliolo.com",
-    "sameAs": [
-      "https://www.emibugliolo.com",
-      "https://www.instagram.com/emibugliolo/",
-      "https://www.linkedin.com/in/emilianobugliolo"
-    ]
-  },
-  "areaServed": "Argentina",
-  "audience": {
-    "@type": "Audience",
-    "audienceType": "Dueños y directivos de PyMEs familiares"
-  }
-}
-</script>
-
-<!-- Open Graph (WhatsApp, LinkedIn, Facebook) -->
+<!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.aprendeia.com.ar/">
 <meta property="og:site_name" content="Aprendeia">
-<meta property="og:title" content="Cambiá el chip. Adoptá IA en tu negocio de manera simple.">
-<meta property="og:description" content="Soy el puente entre vos y la inteligencia artificial. Ayudo a dueños de PyMEs a cambiar el mindset e implementar IA sin necesitar un equipo de tecnología.">
+<meta property="og:title" content="Charlas y capacitaciones online de IA para empresas · Aprendeia">
+<meta property="og:description" content="IA aplicada al negocio, explicada por alguien que opera uno. Charlas y capacitaciones online con el Método ONDA de Emiliano Bugliolo.">
 <meta property="og:image" content="https://www.aprendeia.com.ar/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:type" content="image/png">
 <meta property="og:locale" content="es_AR">
-
-<!-- Twitter/X -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Cambiá el chip. Adoptá IA en tu negocio de manera simple.">
-<meta name="twitter:description" content="Soy el puente entre vos y la inteligencia artificial. Ayudo a dueños de PyMEs a implementar IA sin depender de tecnología.">
+<meta name="twitter:title" content="Charlas y capacitaciones online de IA para empresas · Aprendeia">
+<meta name="twitter:description" content="IA aplicada al negocio, explicada por alguien que opera uno. Método ONDA de Emiliano Bugliolo.">
 <meta name="twitter:image" content="https://www.aprendeia.com.ar/og-image.png">
 
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230A0A0A'/><text x='4' y='23' font-family='Arial' font-weight='900' font-size='20' fill='%2300E5A0'>a</text><circle cx='24' cy='10' r='4' fill='%2300E5A0'/><circle cx='24' cy='10' r='2' fill='%230A0A0A'/></svg>">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%2307090A'/><text x='5' y='23' font-family='Arial' font-weight='900' font-size='20' fill='%2300E5A0'>a</text><circle cx='24' cy='10' r='4' fill='%2300E5A0'/></svg>">
 
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700;800&family=Nunito:wght@400;600;700;800;900&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
-<script src="https://cdn.fromdoppler.com/formgenerator/latest/vendor.js?26937409"></script>
-<link rel="stylesheet" href="https://cdn.fromdoppler.com/formgenerator/latest/styles.css?26937409" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
 <style>
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-:root {
-  --black: #0A0A0A;
-  --white: #FAFAF7;
-  --accent: #00E5A0;
-  --accent-dim: rgba(0,229,160,0.10);
-  --muted: #888880;
-  --surface: #141414;
-  --surface2: #1C1C1C;
-  --border: rgba(255,255,255,0.08);
-  --border-accent: rgba(0,229,160,0.28);
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#07090A;--bg2:#0D1012;--card:#111518;--line:rgba(255,255,255,.08);--line2:rgba(255,255,255,.14);
+  --txt:#F2F4F3;--mut:#8D9693;--acc:#00E5A0;--acc-d:rgba(0,229,160,.10);--acc-l:rgba(0,229,160,.3);
+  --sans:'Inter',system-ui,-apple-system,sans-serif;--disp:'Space Grotesk',var(--sans);--mono:'JetBrains Mono',ui-monospace,monospace;
+  --w:1120px;
 }
+html{scroll-behavior:smooth;scroll-padding-top:80px;overflow-x:hidden}
+body{font-family:var(--sans);background:var(--bg);color:var(--txt);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit}
+img{max-width:100%;display:block}
+.wrap{max-width:var(--w);margin:0 auto;padding:0 1.5rem}
+.mono{font-family:var(--mono)}
+strong{color:var(--txt);font-weight:600}
 
-html { scroll-behavior: smooth; }
-
-body {
-  font-family: 'DM Sans', sans-serif;
-  background: var(--black);
-  color: var(--white);
-  line-height: 1.6;
-  overflow-x: hidden;
-  max-width: 760px;
-  margin: 0 auto;
-  padding: 0 1.5rem;
-}
+/* background grid */
+.grid-bg{position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);
+  background-size:56px 56px;mask-image:radial-gradient(ellipse 80% 70% at 50% 0%,#000 30%,transparent 75%);opacity:.55}
+.glow{position:absolute;z-index:-1;top:-260px;right:-200px;width:760px;height:760px;border-radius:50%;
+  background:radial-gradient(circle,rgba(0,229,160,.13),transparent 62%);pointer-events:none}
 
 /* NAV */
-nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 2rem 0;
-  border-bottom: 0.5px solid var(--border);
-  margin-bottom: 0;
-}
+header{position:sticky;top:0;z-index:50;background:rgba(7,9,10,.78);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+nav{display:flex;align-items:center;justify-content:space-between;height:64px;gap:1rem}
+.logo{font-family:var(--disp);font-weight:700;font-size:1.2rem;letter-spacing:-.03em;text-decoration:none}
+.logo span{color:var(--acc)}
+.nav-links{display:flex;gap:1.75rem;list-style:none}
+.nav-links a{color:var(--mut);text-decoration:none;font-size:.88rem;transition:color .2s}
+.nav-links a:hover{color:var(--txt)}
 
-.logo {
-  font-family: 'Nunito', sans-serif;
-  font-weight: 800;
-  font-size: 1.25rem;
-  letter-spacing: -0.02em;
-  color: var(--white);
-  text-decoration: none;
-}
-.logo span { color: var(--accent); }
-
-.nav-links {
-  display: flex;
-  gap: 1.75rem;
-  align-items: center;
-}
-
-.nav-links a {
-  color: var(--muted);
-  text-decoration: none;
-  font-size: 0.88rem;
-  font-weight: 300;
-  transition: color 0.2s;
-}
-.nav-links a:hover { color: var(--white); }
-
-/* SECTION LABEL */
-.section-num {
-  font-size: 0.7rem;
-  color: var(--accent);
-  text-transform: uppercase;
-  letter-spacing: 0.14em;
-  font-weight: 500;
-  margin-bottom: 2.5rem;
-  display: block;
-  padding-top: 5rem;
-}
+/* BUTTONS */
+.btn{display:inline-flex;align-items:center;gap:.55rem;background:var(--acc);color:#04120C;font-weight:600;font-size:.95rem;
+  padding:.85rem 1.5rem;border-radius:8px;text-decoration:none;transition:transform .15s,box-shadow .2s;white-space:nowrap}
+.btn:hover{transform:translateY(-1px);box-shadow:0 8px 30px rgba(0,229,160,.28)}
+.btn-sm{padding:.55rem 1rem;font-size:.85rem}
+.btn-ghost{background:transparent;color:var(--txt);border:1px solid var(--line2)}
+.btn-ghost:hover{border-color:var(--acc-l);box-shadow:none}
+.btn svg{width:16px;height:16px}
 
 /* HERO */
-.hero {
-  padding: 5rem 0 4rem;
-}
-
-.hero-tag {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.45rem;
-  background: var(--accent-dim);
-  border: 0.5px solid var(--border-accent);
-  color: var(--accent);
-  font-size: 0.72rem;
-  font-weight: 500;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
-  padding: 0.35rem 0.9rem;
-  border-radius: 100px;
-  margin-bottom: 2rem;
-}
-
-.badge-dot {
-  width: 5px; height: 5px;
-  background: var(--accent);
-  border-radius: 50%;
-  animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.25; }
-}
-
-h1 {
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: clamp(2.2rem, 5vw, 3.4rem);
-  font-weight: 700;
-  line-height: 1.08;
-  letter-spacing: -0.04em;
-  margin-bottom: 1.25rem;
-}
-
-h1 em {
-  font-style: normal;
-  color: var(--accent);
-}
-
-.hero-sub {
-  font-size: 1.05rem;
-  color: var(--muted);
-  font-weight: 300;
-  max-width: 520px;
-  margin-bottom: 2.5rem;
-  line-height: 1.8;
-}
-
-.hero-subtitle {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 1rem;
-  font-weight: 500;
-  color: var(--accent);
-  letter-spacing: 0;
-  margin-bottom: 1rem;
-}
-
-.pill-group {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.6rem;
-  margin-bottom: 2.75rem;
-}
-
-.pill {
-  background: var(--surface2);
-  border: 0.5px solid var(--border);
-  border-radius: 100px;
-  padding: 0.35rem 0.9rem;
-  font-size: 0.8rem;
-  color: var(--muted);
-  font-weight: 300;
-}
-
-.pill strong {
-  color: var(--white);
-  font-weight: 500;
-}
-
-/* BTN */
-.btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  background: var(--accent);
-  color: var(--black);
-  font-family: 'DM Sans', sans-serif;
-  font-weight: 500;
-  font-size: 0.92rem;
-  padding: 0.8rem 1.75rem;
-  border-radius: 4px;
-  text-decoration: none;
-  transition: opacity 0.2s, transform 0.15s;
-}
-.btn:hover { opacity: 0.88; transform: translateY(-1px); }
-
-.btn-outline {
-  background: transparent;
-  color: var(--muted);
-  border: 0.5px solid var(--border);
-  font-family: 'DM Sans', sans-serif;
-  font-weight: 300;
-  font-size: 0.92rem;
-  padding: 0.8rem 1.75rem;
-  border-radius: 4px;
-  text-decoration: none;
-  transition: color 0.2s, border-color 0.2s;
-}
-.btn-outline:hover { color: var(--white); border-color: rgba(255,255,255,0.2); }
-
-/* DIVIDER */
-hr {
-  border: none;
-  border-top: 0.5px solid var(--border);
-  margin: 0;
-}
-
-/* SECTION */
-section {
-  padding: 4.5rem 0;
-  border-bottom: 0.5px solid var(--border);
-}
-
-section:last-of-type { border-bottom: none; }
-
-h2 {
-  font-family: 'Nunito', sans-serif;
-  font-size: clamp(1.5rem, 3vw, 2rem);
-  font-weight: 700;
-  letter-spacing: -0.025em;
-  line-height: 1.2;
-  margin-bottom: 0.75rem;
-}
-
-.section-sub {
-  color: var(--muted);
-  font-size: 0.95rem;
-  font-weight: 300;
-  line-height: 1.8;
-  max-width: 540px;
-  margin-bottom: 2.5rem;
-}
-
-/* SERVICE CARDS */
-.cards {
-  display: flex;
-  flex-direction: column;
-  gap: 1px;
-  background: var(--border);
-  border: 0.5px solid var(--border);
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.card {
-  background: var(--surface);
-  padding: 1.75rem 2rem;
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 2rem;
-  transition: background 0.2s;
-}
-.card:hover { background: #181818; }
-
-.card-body { flex: 1; }
-
-.card-label {
-  font-size: 0.68rem;
-  color: var(--accent);
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  font-weight: 500;
-  margin-bottom: 0.5rem;
-}
-
-.card-title {
-  font-family: 'Nunito', sans-serif;
-  font-size: 1.05rem;
-  font-weight: 700;
-  color: var(--white);
-  margin-bottom: 0.4rem;
-  line-height: 1.3;
-}
-
-.card-desc {
-  font-size: 0.85rem;
-  color: var(--muted);
-  font-weight: 300;
-  line-height: 1.65;
-  margin-bottom: 1rem;
-}
-
-.card-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.45rem;
-}
-
-.tag {
-  font-size: 0.72rem;
-  color: var(--muted);
-  background: var(--surface2);
-  border: 0.5px solid var(--border);
-  border-radius: 4px;
-  padding: 0.2rem 0.6rem;
-  font-weight: 300;
-}
-
-.card-cta {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  background: var(--accent);
-  color: var(--black);
-  font-family: 'DM Sans', sans-serif;
-  font-weight: 500;
-  font-size: 0.82rem;
-  padding: 0.6rem 1.2rem;
-  border-radius: 4px;
-  text-decoration: none;
-  white-space: nowrap;
-  flex-shrink: 0;
-  align-self: center;
-  transition: opacity 0.2s;
-}
-.card-cta:hover { opacity: 0.85; }
-
-/* INSTRUCTOR */
-.inst {
-  display: flex;
-  gap: 2rem;
-  align-items: flex-start;
-}
-
-.inst-photo {
-  width: 80px;
-  height: 80px;
-  min-width: 80px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 1.5px solid var(--border-accent);
-}
-
-.inst-name {
-  font-family: 'Nunito', sans-serif;
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: var(--white);
-  margin-bottom: 0.2rem;
-}
-
-.inst-role {
-  font-size: 0.75rem;
-  color: var(--accent);
-  text-transform: uppercase;
-  letter-spacing: 0.07em;
-  margin-bottom: 0.9rem;
-}
-
-.inst-bio {
-  font-size: 0.9rem;
-  color: var(--muted);
-  font-weight: 300;
-  line-height: 1.75;
-  margin-bottom: 1.25rem;
-}
-
-.link-row {
-  display: flex;
-  gap: 0.75rem;
-  flex-wrap: wrap;
-}
-
-.link-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  background: var(--surface2);
-  border: 0.5px solid var(--border);
-  color: var(--muted);
-  text-decoration: none;
-  font-size: 0.82rem;
-  font-weight: 300;
-  padding: 0.45rem 0.9rem;
-  border-radius: 6px;
-  transition: border-color 0.2s, color 0.2s;
-}
-.link-pill:hover { color: var(--white); border-color: rgba(255,255,255,0.2); }
-
-/* NEWSLETTER */
-.newsletter-form {
-  display: flex;
-  gap: 0.75rem;
-  max-width: 440px;
-  flex-wrap: wrap;
-}
-
-.form-input {
-  flex: 1;
-  min-width: 180px;
-  background: var(--surface2);
-  border: 0.5px solid var(--border);
-  border-radius: 6px;
-  padding: 0.75rem 1rem;
-  color: var(--white);
-  font-family: 'DM Sans', sans-serif;
-  font-size: 0.9rem;
-  font-weight: 300;
-  outline: none;
-  transition: border-color 0.2s;
-}
-.form-input::placeholder { color: var(--muted); }
-.form-input:focus { border-color: var(--border-accent); }
-
-.form-note {
-  font-size: 0.72rem;
-  color: var(--muted);
-  font-weight: 300;
-  margin-top: 0.6rem;
-}
-
-/* VIDEO GRID */
-.video-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
-  margin-bottom: 2rem;
-}
-
-.video-card {
-  background: var(--surface2);
-  border: 0.5px solid var(--border);
-  border-radius: 8px;
-  overflow: hidden;
-  text-decoration: none;
-  display: block;
-  transition: border-color 0.2s, transform 0.2s;
-}
-.video-card:hover { border-color: var(--border-accent); transform: translateY(-2px); }
-
-.video-thumb {
-  position: relative;
-  width: 100%;
-  padding-bottom: 56.25%;
-  background: linear-gradient(135deg, #0B2318 0%, #0D2E1A 50%, #122B1E 100%);
-  overflow: hidden;
-}
-
-.video-thumb-inner {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 0.6rem;
-}
-
-.video-play {
-  width: 44px; height: 44px;
-  background: rgba(0,229,160,0.15);
-  border: 1px solid var(--border-accent);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--accent);
-  transition: background 0.2s;
-}
-.video-card:hover .video-play { background: rgba(0,229,160,0.25); }
-
-.video-soon {
-  font-size: 0.62rem;
-  color: var(--accent);
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  font-weight: 500;
-  opacity: 0.7;
-}
-
-.video-info {
-  padding: 0.9rem 1rem;
-}
-
-.video-title {
-  font-family: 'Nunito', sans-serif;
-  font-size: 0.88rem;
-  font-weight: 700;
-  color: var(--white);
-  line-height: 1.35;
-}
-
-@media (max-width: 600px) {
-  .video-grid { grid-template-columns: 1fr; }
-}
-
-@media (min-width: 601px) and (max-width: 780px) {
-  .video-grid { grid-template-columns: repeat(2, 1fr); }
-}
-
-/* CONTACT */
-.contact-row {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.contact-item {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  font-size: 0.9rem;
-  color: var(--muted);
-  font-weight: 300;
-  text-decoration: none;
-  transition: color 0.2s;
-}
-.contact-item:hover { color: var(--white); }
-
-.contact-icon {
-  width: 36px; height: 36px;
-  background: var(--surface2);
-  border: 0.5px solid var(--border);
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1rem;
-  flex-shrink: 0;
-}
-
-/* FOOTER */
-footer {
-  padding: 2.5rem 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-}
-
-footer p { font-size: 0.75rem; color: var(--muted); font-weight: 300; }
-footer a { color: var(--muted); text-decoration: none; }
-footer a:hover { color: var(--white); }
-
-/* WHATSAPP FLOAT */
-.wa-float {
-  position: fixed;
-  bottom: 1.5rem;
-  right: 1.5rem;
-  z-index: 200;
-  width: 52px; height: 52px;
-  background: #25D366;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 20px rgba(37,211,102,0.4);
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-.wa-float:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 28px rgba(37,211,102,0.5);
-}
-
-/* ── DOOPLER NATIVE WRAP ── */
-.dp-native-wrap {
-  background: var(--surface);
-  border: 0.5px solid var(--border-accent);
-  border-radius: 12px;
-  padding: 1.75rem;
-}
-
-.dp-native-wrap .unlock-title {
-  font-family: 'Nunito', sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  color: var(--white);
-  margin-bottom: 1.25rem;
-}
-
-/* Ocultar título/subtítulo propios de Doopler — los reemplazamos con el nuestro */
-.dp-native-wrap [data-dp-form] h1,
-.dp-native-wrap [data-dp-form] h2,
-.dp-native-wrap [data-dp-form] h3,
-.dp-native-wrap [data-dp-form] h4,
-.dp-native-wrap [data-dp-form] > div > div > p,
-.dp-native-wrap [data-dp-form] > div > p { display: none !important; }
-
-/* Contenedor externo del form Doopler — forzar transparente */
-.dp-native-wrap [data-dp-form] > *,
-.dp-native-wrap [data-dp-form] > * > * {
-  background: transparent !important;
-  background-color: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
-  padding: 0 !important;
-  margin: 0 !important;
-}
-
-/* Todo lo que viene DESPUÉS del <form> (branding Doopler) — ocultar */
-.dp-native-wrap [data-dp-form] form ~ * { display: none !important; }
-.dp-native-wrap [data-dp-form] form + * { display: none !important; }
-
-/* ── DOOPLER FORM OVERRIDE ── */
-[data-dp-form],
-[data-dp-form] > *,
-[data-dp-form] > * > *,
-.dp-form-wrapper,
-.dp-form-container,
-.dp-form-basic,
-.dp-form,
-.dp-form-basic > *:not(.dp-form-field):not(.dp-btn-send):not(button):not(input):not(label) {
-  background: transparent !important;
-  background-color: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
-  padding: 0 !important;
-  margin: 0 !important;
-  font-family: 'DM Sans', sans-serif !important;
-  color: var(--white) !important;
-}
-
-/* Ocultar footer Doopler: branding, share, redes sociales */
-[data-dp-form] [class*="legality"],
-[data-dp-form] [class*="share"],
-[data-dp-form] [class*="social"],
-[data-dp-form] [class*="footer"],
-[data-dp-form] [class*="brand"],
-[data-dp-form] [class*="logo"],
-[data-dp-form] [class*="policy"],
-[data-dp-form] [class*="privac"],
-[data-dp-form] hr,
-[data-dp-form] .dp-footer,
-[data-dp-form] .dp-legality,
-[data-dp-form] .dp-share,
-[data-dp-form] .dp-social,
-[data-dp-form] img[src*="doppler"],
-[data-dp-form] img[src*="fromdoppler"] {
-  display: none !important;
-}
-
-/* Fuerza fondo oscuro en todos los divs internos */
-[data-dp-form] div,
-[data-dp-form] form,
-[data-dp-form] section,
-[data-dp-form] article {
-  background: transparent !important;
-  background-color: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
-}
-
-/* Inputs */
-[data-dp-form] input[type="text"],
-[data-dp-form] input[type="email"],
-[data-dp-form] input[type="tel"],
-[data-dp-form] select,
-[data-dp-form] textarea,
-.dp-form input[type="text"],
-.dp-form input[type="email"],
-.dp-form select {
-  background: var(--surface2) !important;
-  background-color: var(--surface2) !important;
-  border: 0.5px solid var(--border) !important;
-  border-radius: 6px !important;
-  padding: 0.75rem 1rem !important;
-  color: var(--white) !important;
-  font-family: 'DM Sans', sans-serif !important;
-  font-size: 0.9rem !important;
-  font-weight: 300 !important;
-  width: 100% !important;
-  outline: none !important;
-  box-shadow: none !important;
-  transition: border-color 0.2s !important;
-}
-
-[data-dp-form] input::placeholder,
-.dp-form input::placeholder {
-  color: var(--muted) !important;
-}
-
-[data-dp-form] input:focus,
-.dp-form input:focus {
-  border-color: var(--border-accent) !important;
-}
-
-/* Checkbox */
-[data-dp-form] input[type="checkbox"] {
-  accent-color: var(--accent) !important;
-  width: 14px !important;
-  height: 14px !important;
-}
-
-[data-dp-form] input[type="checkbox"] + label,
-[data-dp-form] .dp-checkbox-label {
-  font-size: 0.78rem !important;
-  color: var(--muted) !important;
-}
-
-/* Labels */
-[data-dp-form] label,
-.dp-form label {
-  color: var(--muted) !important;
-  font-size: 0.8rem !important;
-  font-weight: 300 !important;
-  margin-bottom: 0.35rem !important;
-  display: block !important;
-}
-
-/* Submit button */
-[data-dp-form] button[type="submit"],
-[data-dp-form] input[type="submit"],
-.dp-form button[type="submit"],
-.dp-form input[type="submit"],
-.dp-btn-send,
-.dp-button {
-  background: var(--accent) !important;
-  background-color: var(--accent) !important;
-  color: var(--black) !important;
-  border: none !important;
-  border-radius: 4px !important;
-  padding: 0.8rem 1.75rem !important;
-  font-family: 'DM Sans', sans-serif !important;
-  font-size: 0.92rem !important;
-  font-weight: 500 !important;
-  cursor: pointer !important;
-  transition: opacity 0.2s !important;
-  width: auto !important;
-  display: inline-flex !important;
-  align-items: center !important;
-}
-
-[data-dp-form] button[type="submit"]:hover,
-.dp-form button[type="submit"]:hover,
-.dp-btn-send:hover {
-  opacity: 0.88 !important;
-}
-
-/* Field groups / rows */
-[data-dp-form] .dp-form-field,
-[data-dp-form] .field-item,
-[data-dp-form] .form-group,
-[data-dp-form] fieldset {
-  background: transparent !important;
-  border: none !important;
-  margin-bottom: 0.85rem !important;
-  padding: 0 !important;
-}
-
-/* Error / success messages */
-[data-dp-form] .dp-form-message,
-[data-dp-form] .dp-message-success,
-[data-dp-form] .dp-message-error {
-  font-size: 0.85rem !important;
-  font-weight: 300 !important;
-  padding: 0.75rem 1rem !important;
-  border-radius: 6px !important;
-  margin-top: 0.75rem !important;
-}
-
-[data-dp-form] .dp-message-success {
-  background: rgba(0,229,160,0.12) !important;
-  color: var(--accent) !important;
-  border: 0.5px solid var(--border-accent) !important;
-}
-
-[data-dp-form] .dp-message-error {
-  background: rgba(255,80,80,0.1) !important;
-  color: #ff6b6b !important;
-  border: 0.5px solid rgba(255,80,80,0.3) !important;
-}
+.hero{position:relative;padding:6rem 0 5rem;isolation:isolate;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:3.5rem;align-items:center}
+.eyebrow{display:inline-flex;align-items:center;gap:.55rem;font-family:var(--mono);font-size:.74rem;color:var(--acc);
+  background:var(--acc-d);border:1px solid var(--acc-l);padding:.35rem .8rem;border-radius:100px;margin-bottom:1.6rem;letter-spacing:.02em}
+.dot{width:6px;height:6px;border-radius:50%;background:var(--acc);box-shadow:0 0 0 0 rgba(0,229,160,.6);animation:ping 2s infinite}
+@keyframes ping{0%{box-shadow:0 0 0 0 rgba(0,229,160,.55)}70%{box-shadow:0 0 0 8px rgba(0,229,160,0)}100%{box-shadow:0 0 0 0 rgba(0,229,160,0)}}
+h1{font-family:var(--disp);font-weight:700;font-size:clamp(2.4rem,5.2vw,4rem);line-height:1.04;letter-spacing:-.045em;margin-bottom:1.4rem}
+h1 em{font-style:normal;color:var(--acc)}
+.lead{font-size:1.12rem;color:var(--mut);max-width:560px;margin-bottom:2.2rem}
+.hero-ctas{display:flex;gap:.8rem;flex-wrap:wrap;margin-bottom:2.2rem}
+.hero-meta{display:flex;gap:1.4rem;flex-wrap:wrap;font-family:var(--mono);font-size:.76rem;color:var(--mut)}
+.hero-meta span::before{content:"✓ ";color:var(--acc)}
+
+/* TERMINAL */
+.term{background:linear-gradient(180deg,#0F1416,#0A0D0E);border:1px solid var(--line2);border-radius:14px;overflow:hidden;
+  box-shadow:0 30px 80px rgba(0,0,0,.55),0 0 0 1px rgba(0,229,160,.05) inset}
+.term-bar{display:flex;align-items:center;gap:.45rem;padding:.8rem 1rem;border-bottom:1px solid var(--line);background:rgba(255,255,255,.02)}
+.term-bar i{width:10px;height:10px;border-radius:50%;background:#2A3033}
+.term-bar b{margin-left:.6rem;font-family:var(--mono);font-weight:400;font-size:.72rem;color:var(--mut)}
+.term-body{padding:1.3rem 1.3rem 1.5rem;font-family:var(--mono);font-size:.82rem;line-height:1.95}
+.term-body p{opacity:0;animation:typeIn .4s forwards;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.term-body p:nth-child(1){animation-delay:.2s}.term-body p:nth-child(2){animation-delay:.7s}.term-body p:nth-child(3){animation-delay:1.2s}
+.term-body p:nth-child(4){animation-delay:1.7s}.term-body p:nth-child(5){animation-delay:2.2s}.term-body p:nth-child(6){animation-delay:2.7s}
+.term-body p:nth-child(7){animation-delay:3.3s}
+@keyframes typeIn{from{opacity:0;transform:translateY(3px)}to{opacity:1;transform:none}}
+.c-acc{color:var(--acc)}.c-mut{color:var(--mut)}.c-w{color:var(--txt)}.c-y{color:#E8C468}
+.cursor{display:inline-block;width:8px;height:15px;background:var(--acc);vertical-align:-2px;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+
+/* PROOF STRIP */
+.strip{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--bg2)}
+.strip-grid{display:grid;grid-template-columns:repeat(4,1fr)}
+.stat{padding:1.6rem 1.25rem;border-right:1px solid var(--line)}
+.stat:last-child{border-right:none}
+.stat b{display:block;font-family:var(--disp);font-size:1.6rem;letter-spacing:-.03em;color:var(--txt);line-height:1.1}
+.stat span{font-size:.82rem;color:var(--mut)}
+
+/* SECTIONS */
+section{padding:6rem 0;border-bottom:1px solid var(--line)}
+.label{font-family:var(--mono);font-size:.74rem;color:var(--acc);letter-spacing:.06em;margin-bottom:1rem;display:block}
+h2{font-family:var(--disp);font-weight:700;font-size:clamp(1.8rem,3.4vw,2.6rem);letter-spacing:-.035em;line-height:1.1;margin-bottom:1rem;max-width:760px}
+.sub{color:var(--mut);font-size:1.04rem;max-width:640px;margin-bottom:3rem}
+h3{font-family:var(--disp);font-weight:600;font-size:1.2rem;letter-spacing:-.02em;line-height:1.25;margin-bottom:.5rem}
+
+/* DEFINITION (GEO) */
+.def{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem}
+.def-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:1.8rem}
+.def-card.main{border-color:var(--acc-l);background:linear-gradient(160deg,rgba(0,229,160,.07),var(--card) 55%)}
+.def-card p{color:var(--mut);font-size:.96rem}
+.def-card p+p{margin-top:.8rem}
+.def-card .tag{font-family:var(--mono);font-size:.7rem;color:var(--mut);margin-bottom:.8rem;display:block}
+.def-card.main .tag{color:var(--acc)}
+
+/* FORMATS */
+.formats{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
+.fmt{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:1.8rem;display:flex;flex-direction:column;transition:border-color .2s,transform .2s}
+.fmt:hover{border-color:var(--acc-l);transform:translateY(-2px)}
+.fmt-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:1.4rem}
+.fmt-ico{width:42px;height:42px;border-radius:10px;background:var(--acc-d);border:1px solid var(--acc-l);display:grid;place-items:center;color:var(--acc)}
+.fmt-ico svg{width:20px;height:20px}
+.chip{font-family:var(--mono);font-size:.68rem;color:var(--mut);border:1px solid var(--line2);border-radius:100px;padding:.2rem .6rem}
+.fmt p{color:var(--mut);font-size:.93rem;margin-bottom:1.2rem}
+.fmt ul{list-style:none;margin-top:auto;border-top:1px solid var(--line);padding-top:1rem;display:grid;gap:.45rem}
+.fmt li{font-size:.85rem;color:var(--mut);font-family:var(--mono)}
+.fmt li::before{content:"→ ";color:var(--acc)}
+
+/* TALKS */
+.talks{display:grid;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.talk{display:grid;grid-template-columns:64px 1fr auto;gap:1.5rem;align-items:start;background:var(--bg);padding:1.6rem 1.8rem;transition:background .2s}
+.talk:hover{background:var(--card)}
+.talk-n{font-family:var(--mono);font-size:.8rem;color:var(--acc);padding-top:.2rem}
+.talk p{color:var(--mut);font-size:.92rem;max-width:680px}
+.talk-tags{display:flex;gap:.4rem;flex-wrap:wrap;margin-top:.8rem}
+.talk-dur{font-family:var(--mono);font-size:.74rem;color:var(--mut);white-space:nowrap;padding-top:.25rem}
+
+/* ONDA */
+.onda{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem;position:relative}
+.phase{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:1.6rem;position:relative}
+.phase-l{font-family:var(--disp);font-size:3rem;font-weight:700;line-height:1;color:var(--acc);margin-bottom:1rem;letter-spacing:-.05em}
+.phase-k{font-family:var(--mono);font-size:.7rem;color:var(--mut);margin-bottom:.35rem;display:block}
+.phase p{color:var(--mut);font-size:.9rem}
+.phase .res{margin-top:1rem;padding-top:1rem;border-top:1px dashed var(--line2);font-size:.84rem;color:var(--txt)}
+.phase .res b{color:var(--acc);font-weight:500;font-family:var(--mono);font-size:.72rem;display:block;margin-bottom:.2rem}
+.onda-note{margin-top:1.5rem;font-family:var(--mono);font-size:.8rem;color:var(--mut)}
+
+/* AUDIENCE + STEPS */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:3rem}
+.aud{list-style:none;display:grid;gap:.75rem}
+.aud li{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:1.1rem 1.25rem}
+.aud li b{display:block;font-weight:600;margin-bottom:.15rem}
+.aud li span{color:var(--mut);font-size:.9rem}
+.steps{list-style:none;counter-reset:s;display:grid;gap:1rem}
+.steps li{counter-increment:s;display:grid;grid-template-columns:44px 1fr;gap:1rem;align-items:start}
+.steps li::before{content:"0" counter(s);font-family:var(--mono);font-size:.8rem;color:var(--acc);border:1px solid var(--acc-l);background:var(--acc-d);
+  border-radius:10px;height:44px;display:grid;place-items:center}
+.steps b{display:block;font-weight:600;margin-bottom:.1rem}
+.steps span{color:var(--mut);font-size:.92rem}
+
+/* ABOUT */
+.about{display:grid;grid-template-columns:320px 1fr;gap:3.5rem;align-items:start}
+.photo{border-radius:16px;overflow:hidden;border:1px solid var(--line2);position:relative;aspect-ratio:4/5;background:var(--card)}
+.photo img{width:100%;height:100%;object-fit:cover}
+.photo figcaption{position:absolute;left:.8rem;bottom:.8rem;font-family:var(--mono);font-size:.7rem;background:rgba(7,9,10,.8);border:1px solid var(--line2);padding:.3rem .6rem;border-radius:6px;color:var(--mut)}
+.about-txt p{color:var(--mut);margin-bottom:1rem;font-size:1rem}
+.creds{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:.6rem;margin:1.6rem 0 1.8rem}
+.creds li{font-size:.88rem;color:var(--mut);padding:.7rem .9rem;border:1px solid var(--line);border-radius:10px;background:var(--card)}
+.creds li b{color:var(--txt);font-weight:600}
+.links{display:flex;gap:.6rem;flex-wrap:wrap}
+.links a{font-family:var(--mono);font-size:.78rem;color:var(--mut);text-decoration:none;border:1px solid var(--line2);padding:.45rem .8rem;border-radius:8px;transition:color .2s,border-color .2s}
+.links a:hover{color:var(--txt);border-color:var(--acc-l)}
+
+/* VIDEOS */
+.videos{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-bottom:2rem}
+.vid{text-decoration:none;background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;transition:border-color .2s,transform .2s}
+.vid:hover{border-color:var(--acc-l);transform:translateY(-2px)}
+.vid-th{aspect-ratio:16/9;position:relative;background:#0B1512}
+.vid-th img{width:100%;height:100%;object-fit:cover}
+.vid-th::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(0,0,0,.55))}
+.vid p{font-size:.86rem;font-weight:500;line-height:1.4;padding:.85rem .95rem}
+
+/* RESOURCE */
+.res-box{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;align-items:center;background:linear-gradient(140deg,rgba(0,229,160,.08),var(--card) 50%);
+  border:1px solid var(--acc-l);border-radius:18px;padding:2.5rem}
+.res-box h2{font-size:clamp(1.5rem,2.6vw,2rem)}
+.res-box .sub{margin-bottom:0}
+.form-note{font-size:.74rem;color:var(--mut);margin-top:.7rem;font-family:var(--mono)}
+
+/* FAQ */
+.faq{display:grid;gap:.75rem;max-width:860px}
+.faq details{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:0 1.3rem;transition:border-color .2s}
+.faq details[open]{border-color:var(--acc-l)}
+.faq summary{cursor:pointer;list-style:none;padding:1.15rem 0;font-weight:600;display:flex;justify-content:space-between;gap:1rem}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-family:var(--mono);color:var(--acc);font-size:1.1rem;line-height:1}
+.faq details[open] summary::after{content:"−"}
+.faq details p{color:var(--mut);padding-bottom:1.2rem;font-size:.95rem}
+
+/* FINAL CTA */
+.final{text-align:center;padding:7rem 0;position:relative;isolation:isolate;border-bottom:none;overflow:hidden}
+.final h2{margin:0 auto 1rem;max-width:720px}
+.final .sub{margin:0 auto 2.2rem}
+.final .glow{top:auto;bottom:-420px;right:50%;transform:translateX(50%)}
+
+footer{border-top:1px solid var(--line);padding:2.2rem 0;font-size:.82rem;color:var(--mut)}
+.foot{display:flex;justify-content:space-between;gap:1.5rem;flex-wrap:wrap}
+footer a{color:var(--mut);text-decoration:none}footer a:hover{color:var(--txt)}
+
+/* MOBILE CTA BAR */
+.mbar{display:none}
+
+/* DOPPLER (form externo) */
+[data-dp-form] *{font-family:var(--sans)!important}
+[data-dp-form] div,[data-dp-form] form,[data-dp-form] section{background:transparent!important;border:none!important;box-shadow:none!important}
+[data-dp-form] h1,[data-dp-form] h2,[data-dp-form] h3,[data-dp-form] h4,
+[data-dp-form] [class*="legality"],[data-dp-form] [class*="share"],[data-dp-form] [class*="social"],[data-dp-form] [class*="footer"],
+[data-dp-form] [class*="brand"],[data-dp-form] [class*="logo"],[data-dp-form] [class*="policy"],[data-dp-form] [class*="privac"],
+[data-dp-form] hr,[data-dp-form] img[src*="doppler"],[data-dp-form] form ~ *{display:none!important}
+[data-dp-form] input[type=text],[data-dp-form] input[type=email]{background:var(--bg)!important;border:1px solid var(--line2)!important;border-radius:8px!important;
+  padding:.8rem 1rem!important;color:var(--txt)!important;font-size:.92rem!important;width:100%!important;outline:none!important;margin-bottom:.7rem!important}
+[data-dp-form] input:focus{border-color:var(--acc)!important}
+[data-dp-form] label{color:var(--mut)!important;font-size:.8rem!important;display:block!important;margin-bottom:.3rem!important}
+[data-dp-form] input[type=checkbox]{accent-color:var(--acc)!important}
+[data-dp-form] button,[data-dp-form] input[type=submit]{background:var(--acc)!important;color:#04120C!important;border:none!important;border-radius:8px!important;
+  padding:.85rem 1.5rem!important;font-weight:600!important;font-size:.95rem!important;cursor:pointer!important;width:auto!important}
 
 /* RESPONSIVE */
-@media (max-width: 600px) {
-  body { padding: 0 1.1rem; }
-  nav { padding: 1.5rem 0; }
-  .nav-links { gap: 1.1rem; }
-  h1 { font-size: 2rem; }
-  .hero { padding: 3.5rem 0 3rem; }
-  .card { flex-direction: column; gap: 1.25rem; }
-  .card-cta { align-self: flex-start; }
-  .inst { flex-direction: column; gap: 1.25rem; }
-  .section-num { padding-top: 3.5rem; }
-  section { padding: 3.5rem 0; }
+@media (max-width:960px){
+  .hero-grid,.two,.about,.res-box,.def{grid-template-columns:1fr}
+  .formats{grid-template-columns:1fr}
+  .onda{grid-template-columns:1fr 1fr}
+  .videos{grid-template-columns:1fr 1fr}
+  .strip-grid{grid-template-columns:1fr 1fr}
+  .stat:nth-child(2){border-right:none}.stat:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .about{gap:2rem}.photo{max-width:300px}
+  .nav-links{display:none}
 }
+@media (max-width:600px){
+  .hero{padding:3.5rem 0 3.5rem}
+  section{padding:4rem 0}
+  .onda,.videos,.creds{grid-template-columns:1fr}
+  .talk{grid-template-columns:1fr;gap:.4rem;padding:1.4rem}
+  .term-body{font-size:.74rem}
+  .res-box{padding:1.6rem}
+  header .btn{display:none}
+  .mbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:60;padding:.7rem 1rem calc(.7rem + env(safe-area-inset-bottom));
+    background:rgba(7,9,10,.92);backdrop-filter:blur(12px);border-top:1px solid var(--line)}
+  .mbar .btn{width:100%;justify-content:center}
+  footer{padding-bottom:6rem}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.term-body p{opacity:1}}
 </style>
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-L7RQEJMF4K"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-L7RQEJMF4K');
-</script>
-
-<!-- Schema.org -->
+<!-- Datos estructurados (Schema.org) — entidad, servicio, método y FAQ -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "EducationalOrganization",
-      "@id": "https://www.aprendeia.com.ar/#aprendeia",
+      "@type": "WebSite",
+      "@id": "https://www.aprendeia.com.ar/#website",
+      "url": "https://www.aprendeia.com.ar/",
       "name": "Aprendeia",
-      "description": "Plataforma de capacitaciones, mentorías y workshops de inteligencia artificial para dueños y directivos de PyMEs argentinas. Sin tecnicismos, con enfoque práctico y estratégico.",
+      "inLanguage": "es-AR",
+      "publisher": { "@id": "https://www.aprendeia.com.ar/#org" }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://www.aprendeia.com.ar/#webpage",
+      "url": "https://www.aprendeia.com.ar/",
+      "name": "Charlas y capacitaciones online de IA para empresas · Aprendeia",
+      "isPartOf": { "@id": "https://www.aprendeia.com.ar/#website" },
+      "about": { "@id": "https://www.aprendeia.com.ar/#org" },
+      "mainEntity": { "@id": "https://www.aprendeia.com.ar/#servicio" },
+      "dateModified": "2026-11-25",
+      "inLanguage": "es-AR"
+    },
+    {
+      "@type": "EducationalOrganization",
+      "@id": "https://www.aprendeia.com.ar/#org",
+      "name": "Aprendeia",
+      "alternateName": ["aprendeia.com.ar", "Aprendé IA"],
       "url": "https://www.aprendeia.com.ar/",
       "logo": "https://www.aprendeia.com.ar/og-image.png",
+      "description": "Aprendeia es la unidad de formación de Emiliano Bugliolo: charlas y capacitaciones online sobre adopción de inteligencia artificial para dueños, directivos y equipos de PyMEs y empresas familiares de habla hispana.",
       "founder": { "@id": "https://www.aprendeia.com.ar/#emiliano" },
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Buenos Aires",
-        "addressRegion": "CABA",
-        "addressCountry": "AR"
-      },
       "areaServed": [
         { "@type": "Country", "name": "Argentina" },
+        { "@type": "Country", "name": "Uruguay" },
+        { "@type": "Country", "name": "Chile" },
         { "@type": "Country", "name": "México" },
         { "@type": "Country", "name": "Colombia" },
-        { "@type": "Country", "name": "Chile" }
+        { "@type": "Country", "name": "España" }
       ],
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Formatos de capacitación en IA",
-        "itemListElement": [
-          { "@type": "Offer", "itemOffered": { "@type": "Course", "name": "Capacitaciones online de IA para equipos", "description": "Formatos en vivo o grabados para equipos completos o áreas específicas." } },
-          { "@type": "Offer", "itemOffered": { "@type": "Course", "name": "Mentoría individual de adopción de IA", "description": "Diagnóstico, hoja de ruta personalizada y acompañamiento en la implementación." } },
-          { "@type": "Offer", "itemOffered": { "@type": "Course", "name": "Workshop presencial de IA para PyMEs", "description": "Jornada intensiva en Buenos Aires con diagnóstico y plan de acción concreto." } }
-        ]
+      "knowsAbout": ["Inteligencia artificial aplicada a PyMEs", "Adopción de IA en empresas", "Empresas familiares", "Automatización de procesos", "Profesionalización de PyMEs", "Método ONDA"],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Contrataciones de charlas y capacitaciones",
+        "url": "https://wa.me/5491125534340",
+        "availableLanguage": ["es"]
       },
-      "sameAs": ["https://www.emibugliolo.com/"]
+      "sameAs": ["https://www.youtube.com/@emibugliolo"]
     },
     {
       "@type": "Person",
       "@id": "https://www.aprendeia.com.ar/#emiliano",
       "name": "Emiliano Bugliolo",
       "alternateName": "Emi Bugliolo",
-      "jobTitle": "Consultor de Estrategia e IA para PyMEs",
-      "description": "Socio operativo de empresa familiar con más de 70 años en el mercado. Más de 20 años en negocios reales. Creador del Método ONDA y del podcast Desde el Garage.",
+      "jobTitle": "Speaker y capacitador en IA aplicada a PyMEs; consultor en profesionalización de empresas familiares",
+      "description": "Socio operativo de una empresa familiar argentina con más de 70 años en el mercado, con más de 20 años de experiencia tomando decisiones de negocio desde adentro. Creador del Método ONDA para adoptar IA en PyMEs y conductor del podcast Desde el Garage.",
+      "image": "https://www.aprendeia.com.ar/emiliano-bugliolo.webp",
       "url": "https://www.emibugliolo.com/",
+      "nationality": { "@type": "Country", "name": "Argentina" },
+      "homeLocation": { "@type": "Place", "name": "Buenos Aires, Argentina" },
+      "knowsAbout": ["Inteligencia artificial para empresas", "Empresas familiares", "Profesionalización de PyMEs", "Automatización de procesos", "Estrategia comercial", "GEO (Generative Engine Optimization)"],
       "sameAs": [
         "https://www.emibugliolo.com/",
         "https://www.linkedin.com/in/emilianobugliolo/",
-        "https://instagram.com/emibugliolo",
-        "https://youtube.com/@emibugliolo",
-        "https://tiktok.com/@emibugliolo"
+        "https://www.instagram.com/emibugliolo/",
+        "https://www.youtube.com/@emibugliolo",
+        "https://www.tiktok.com/@emibugliolo"
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.aprendeia.com.ar/#servicio",
+      "name": "Charlas y capacitaciones online de inteligencia artificial para empresas",
+      "serviceType": "Capacitación corporativa en inteligencia artificial",
+      "provider": { "@id": "https://www.aprendeia.com.ar/#org" },
+      "areaServed": "Latinoamérica y España (modalidad online)",
+      "audience": { "@type": "BusinessAudience", "audienceType": "Dueños, directivos y equipos de PyMEs y empresas familiares; cámaras empresarias; organizadores de eventos" },
+      "availableChannel": { "@type": "ServiceChannel", "serviceUrl": "https://wa.me/5491125534340", "name": "WhatsApp" },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Formatos de Aprendeia",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Course", "name": "Charla online de IA para empresas", "description": "Charla de 45 a 60 minutos para eventos, cámaras empresarias, asociaciones y equipos. Incluye espacio de preguntas.", "provider": { "@id": "https://www.aprendeia.com.ar/#org" }, "hasCourseInstance": { "@type": "CourseInstance", "courseMode": "online" } } },
+          { "@type": "Offer", "itemOffered": { "@type": "Course", "name": "Capacitación in-company online de IA", "description": "Programa de varias sesiones en vivo para equipos de una empresa, con ejercicios aplicados a sus propios procesos.", "provider": { "@id": "https://www.aprendeia.com.ar/#org" }, "hasCourseInstance": { "@type": "CourseInstance", "courseMode": "online" } } },
+          { "@type": "Offer", "itemOffered": { "@type": "Course", "name": "Workshop online Método ONDA para dueños", "description": "Taller en vivo para grupos reducidos de dueños y directivos: diagnóstico, priorización y plan de adopción de IA.", "provider": { "@id": "https://www.aprendeia.com.ar/#org" }, "hasCourseInstance": { "@type": "CourseInstance", "courseMode": "online" } } }
+        ]
+      }
+    },
+    {
+      "@type": "HowTo",
+      "@id": "https://www.aprendeia.com.ar/#metodo-onda",
+      "name": "Método ONDA: cómo adoptar inteligencia artificial en una PyME",
+      "description": "Metodología en 4 fases creada por Emiliano Bugliolo para adoptar IA en PyMEs sin desordenar la operación: Observar, Normar, Desarrollar y Autonomizar.",
+      "author": { "@id": "https://www.aprendeia.com.ar/#emiliano" },
+      "step": [
+        { "@type": "HowToStep", "position": 1, "name": "Observar", "text": "Diagnóstico real de la empresa: mapear los procesos que más tiempo consumen, las tareas repetitivas y las decisiones improvisadas." },
+        { "@type": "HowToStep", "position": 2, "name": "Normar", "text": "Documentar los procesos, definir responsables y tiempos. La IA solo puede mejorar lo que está escrito." },
+        { "@type": "HowToStep", "position": 3, "name": "Desarrollar", "text": "Implementar IA en un único proceso de alto impacto con una prueba piloto y medir antes y después: tiempo, costo y errores." },
+        { "@type": "HowToStep", "position": 4, "name": "Autonomizar", "text": "Capacitar al equipo, delegar la operación de las herramientas y medir mensualmente para que la empresa no dependa del dueño." }
       ]
     },
     {
       "@type": "FAQPage",
+      "@id": "https://www.aprendeia.com.ar/#faq",
       "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "¿Para quién son las capacitaciones y mentorías de Aprendeia?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Para dueños, socios, gerentes y directivos de empresas y PyMEs en Argentina que quieren implementar inteligencia artificial en su operación real, sin necesitar conocimientos técnicos ni un equipo de tecnología."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "¿Necesito saber programación para acceder a estas capacitaciones?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "No. El enfoque es organizacional y estratégico. Se trabaja el modelo de adopción cultural y estructural de la IA en la empresa, no aspectos técnicos de programación."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "¿Qué es el Método ONDA?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "El Método ONDA es la metodología de adopción de IA para empresas creada por Emiliano Bugliolo. Guía a los dueños y equipos a través de un proceso estructurado para implementar inteligencia artificial de forma real y sostenible, sin depender de un equipo técnico."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "¿Dónde se realizan los workshops presenciales de Aprendeia?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Los workshops presenciales se realizan en Buenos Aires (barrio de Recoleta). Las capacitaciones online y mentorías están disponibles de forma remota para toda LATAM."
-          }
-        }
+        { "@type": "Question", "name": "¿Qué es Aprendeia?", "acceptedAnswer": { "@type": "Answer", "text": "Aprendeia es la unidad de formación de Emiliano Bugliolo. Ofrece charlas y capacitaciones online de inteligencia artificial para dueños, directivos y equipos de PyMEs y empresas familiares de habla hispana, con foco en aplicación práctica y sin tecnicismos." } },
+        { "@type": "Question", "name": "¿Quién da las charlas y capacitaciones de Aprendeia?", "acceptedAnswer": { "@type": "Answer", "text": "Emiliano Bugliolo, socio operativo de una empresa familiar argentina con más de 70 años en el mercado, con más de 20 años de experiencia en negocios reales y creador del Método ONDA para adoptar IA en PyMEs." } },
+        { "@type": "Question", "name": "¿Las capacitaciones son online o presenciales?", "acceptedAnswer": { "@type": "Answer", "text": "Son 100% online y en vivo, por Zoom, Google Meet o Microsoft Teams. Se pueden contratar desde cualquier país de habla hispana." } },
+        { "@type": "Question", "name": "¿Hace falta saber programación o tener un equipo de tecnología?", "acceptedAnswer": { "@type": "Answer", "text": "No. El enfoque es de negocio: qué procesos conviene mejorar con IA, cómo ordenarlos y cómo medir el resultado. Las herramientas se muestran aplicadas a casos reales de PyMEs." } },
+        { "@type": "Question", "name": "¿Qué es el Método ONDA?", "acceptedAnswer": { "@type": "Answer", "text": "El Método ONDA es la metodología de Emiliano Bugliolo para adoptar IA en PyMEs en 4 fases: Observar (diagnóstico), Normar (documentar procesos), Desarrollar (piloto de IA medido) y Autonomizar (el equipo opera sin depender del dueño)." } },
+        { "@type": "Question", "name": "¿Cuánto cuesta una charla o capacitación de IA de Aprendeia?", "acceptedAnswer": { "@type": "Answer", "text": "Depende del formato, la duración y la cantidad de participantes. Se envía una propuesta con temario, formato y honorarios después de una breve conversación por WhatsApp." } },
+        { "@type": "Question", "name": "¿Cuál es la diferencia entre Aprendeia y emibugliolo.com?", "acceptedAnswer": { "@type": "Answer", "text": "Aprendeia se enfoca en formación: charlas y capacitaciones online. En emibugliolo.com Emiliano Bugliolo ofrece consultoría estratégica e implementación para profesionalizar y estructurar PyMEs." } }
       ]
     }
   ]
 }
 </script>
+
+<!-- Formulario Doppler (defer: no bloquea el render) -->
+<link rel="stylesheet" href="https://cdn.fromdoppler.com/formgenerator/latest/styles.css?26937409" media="print" onload="this.media='all'">
+<script defer src="https://cdn.fromdoppler.com/formgenerator/latest/vendor.js?26937409"></script>
+
+<!-- Google tag -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L7RQEJMF4K"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-L7RQEJMF4K');</script>
 </head>
 <body>
 
-<!-- NAV -->
-<nav>
-  <a href="/" class="logo">aprende<span>ia</span></a>
-  <div class="nav-links">
-    <a href="#formatos">Formatos</a>
-    <a href="#videos">Videos</a>
-    <a href="#contacto">Contacto</a>
-  </div>
-</nav>
+<header>
+  <nav class="wrap" aria-label="Principal">
+    <a href="/" class="logo" aria-label="Aprendeia, inicio">aprende<span>ia</span></a>
+    <ul class="nav-links">
+      <li><a href="#formatos">Formatos</a></li>
+      <li><a href="#charlas">Charlas</a></li>
+      <li><a href="#metodo-onda">Método ONDA</a></li>
+      <li><a href="#emiliano">Quién la da</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+    <a class="btn btn-sm" data-cta="nav" href="https://wa.me/5491125534340?text=Hola%20Emiliano%2C%20quiero%20coordinar%20una%20charla%20o%20capacitaci%C3%B3n%20online%20de%20Aprendeia." target="_blank" rel="noopener">Coordinar una charla</a>
+  </nav>
+</header>
 
-<!-- 01 · HERO -->
-<section class="hero" id="inicio">
-  <div class="hero-tag">
-    <div class="badge-dot"></div>
-    01 · Aprendeia
-  </div>
-  <h1>Cambiá el chip.<br>Adoptá <em>IA en tu negocio</em><br>de manera simple.</h1>
-  <h2 class="hero-subtitle">Capacitación, mentoría y talleres de IA para dueños de PyMEs argentinas</h2>
-  <p class="hero-sub">
-    Soy el puente entre vos y la inteligencia artificial. Te ayudo a cambiar el mindset y a implementar IA en tu empresa sin necesitar un equipo de tecnología.
-  </p>
-  <div class="pill-group">
-    <div class="pill"><strong>Cambio de mindset</strong> · Sin tecnicismos</div>
-    <div class="pill"><strong>Para dueños</strong> · PyMEs Argentina</div>
-    <div class="pill"><strong>3 formatos</strong> · Online y presencial</div>
-  </div>
-  <div style="display:flex; gap:0.85rem; flex-wrap:wrap;">
-    <a href="#formatos" class="btn">Ver formatos →</a>
-    <a href="#contacto" class="btn-outline">Consultar disponibilidad</a>
-  </div>
-</section>
+<main>
 
-<!-- 02 · FORMATOS -->
-<section id="formatos">
-  <span class="section-num">02 · Formatos de trabajo</span>
-  <h2>Elegí tu formato</h2>
-  <p class="section-sub">
-    El primer paso es el mindset, no la tecnología. Estos son los tres formatos para acompañarte en ese camino.
-  </p>
-
-  <div class="cards">
-
-    <div class="card">
-      <div class="card-body">
-        <p class="card-label">Online</p>
-        <p class="card-title">Capacitaciones online</p>
-        <p class="card-desc">Formatos en vivo o grabados para equipos completos o áreas específicas. Desde introducción a la IA hasta implementación práctica por sector.</p>
-        <div class="card-tags">
-          <span class="tag">En vivo o grabado</span>
-          <span class="tag">Para equipos</span>
-          <span class="tag">Desde fundamentos</span>
-        </div>
-      </div>
-      <a href="https://wa.me/5491125534340?text=Hola%20Emiliano%2C%20quiero%20saber%20m%C3%A1s%20sobre%20las%20capacitaciones%20online%20de%20Aprendeia" target="_blank" rel="noopener" class="card-cta">Consultar →</a>
-    </div>
-
-    <div class="card">
-      <div class="card-body">
-        <p class="card-label">1 a 1 · Más elegido</p>
-        <p class="card-title">Mentoría individual</p>
-        <p class="card-desc">Trabajo directo con el dueño o directivo. Diagnóstico de la empresa, hoja de ruta personalizada de adopción de IA y acompañamiento en la implementación.</p>
-        <div class="card-tags">
-          <span class="tag">Diagnóstico real</span>
-          <span class="tag">Hoja de ruta</span>
-          <span class="tag">Acompañamiento</span>
-        </div>
-      </div>
-      <a href="https://wa.me/5491125534340?text=Hola%20Emiliano%2C%20quiero%20saber%20m%C3%A1s%20sobre%20las%20mentor%C3%ADas%20de%20Aprendeia" target="_blank" rel="noopener" class="card-cta">Consultar →</a>
-    </div>
-
-    <div class="card">
-      <div class="card-body">
-        <p class="card-label">Presencial · Buenos Aires</p>
-        <p class="card-title">Workshops presenciales</p>
-        <p class="card-desc">Jornadas intensivas para grupos reducidos de dueños y directivos. Diagnóstico, modelo de adopción en 3 fases y plan de acción concreto en una sola mañana.</p>
-        <div class="card-tags">
-          <span class="tag">Grupos reducidos</span>
-          <span class="tag">Plan de acción</span>
-          <span class="tag">Recoleta, BA</span>
-        </div>
-      </div>
-      <a href="https://wa.me/5491125534340?text=Hola%20Emiliano%2C%20quiero%20saber%20m%C3%A1s%20sobre%20los%20workshops%20presenciales%20de%20Aprendeia" target="_blank" rel="noopener" class="card-cta">Consultar →</a>
-    </div>
-
-  </div>
-</section>
-
-<!-- 03 · VIDEOS -->
-<section id="videos">
-  <span class="section-num">03 · Canal de YouTube</span>
-  <h2>Videos y contenidos</h2>
-  <p class="section-sub">
-    Conversaciones reales sobre IA, negocios y lo que nadie te cuenta. Nuevos episodios cada semana.
-  </p>
-
-  <div class="video-grid">
-
-    <a href="https://youtu.be/jpWUrPu2MQo" target="_blank" rel="noopener" class="video-card">
-      <div class="video-thumb" style="background:none;">
-        <img src="https://img.youtube.com/vi/jpWUrPu2MQo/maxresdefault.jpg" alt="Cómo Escalar tu PyME con Growth Marketing e IA" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
-        <div class="video-thumb-inner" style="background:rgba(0,0,0,0.3);">
-          <div class="video-play" style="background:rgba(0,0,0,0.6); border-color:rgba(255,255,255,0.3);">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>
-          </div>
-        </div>
-      </div>
-      <div class="video-info">
-        <p class="video-title">Cómo Escalar tu PyME con Growth Marketing e IA — Federico Feres</p>
-      </div>
-    </a>
-
-    <a href="https://www.youtube.com/watch?v=cos03T1Ze8M" target="_blank" rel="noopener" class="video-card">
-      <div class="video-thumb" style="background:none;">
-        <img src="https://img.youtube.com/vi/cos03T1Ze8M/maxresdefault.jpg" alt="IA para PyMEs: Ragaco explica cómo arrancar sin perderte" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
-        <div class="video-thumb-inner" style="background:rgba(0,0,0,0.3);">
-          <div class="video-play" style="background:rgba(0,0,0,0.6); border-color:rgba(255,255,255,0.3);">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>
-          </div>
-        </div>
-      </div>
-      <div class="video-info">
-        <p class="video-title">IA para PyMEs: Ragaco explica cómo arrancar sin perderte</p>
-      </div>
-    </a>
-
-    <a href="https://www.youtube.com/watch?v=9lQ_UxP0ky8" target="_blank" rel="noopener" class="video-card">
-      <div class="video-thumb" style="background:none;">
-        <img src="https://img.youtube.com/vi/9lQ_UxP0ky8/maxresdefault.jpg" alt="De Director en Google a VP de Pinterest: La historia que no podía contar" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
-        <div class="video-thumb-inner" style="background:rgba(0,0,0,0.3);">
-          <div class="video-play" style="background:rgba(0,0,0,0.6); border-color:rgba(255,255,255,0.3);">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>
-          </div>
-        </div>
-      </div>
-      <div class="video-info">
-        <p class="video-title">De Director en Google a VP de Pinterest — Marcos Westphalen</p>
-      </div>
-    </a>
-
-    <a href="https://www.youtube.com/watch?v=_0q1_nBAGys" target="_blank" rel="noopener" class="video-card">
-      <div class="video-thumb" style="background:none;">
-        <img src="https://img.youtube.com/vi/_0q1_nBAGys/maxresdefault.jpg" alt="Cómo hacer que tu negocio sea visible en Google y ganar más clientes" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
-        <div class="video-thumb-inner" style="background:rgba(0,0,0,0.3);">
-          <div class="video-play" style="background:rgba(0,0,0,0.6); border-color:rgba(255,255,255,0.3);">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>
-          </div>
-        </div>
-      </div>
-      <div class="video-info">
-        <p class="video-title">Cómo hacer que tu negocio sea visible y atraer más clientes con IA</p>
-      </div>
-    </a>
-
-  </div>
-
-  <a href="https://www.youtube.com/@emibugliolo" target="_blank" rel="noopener" class="btn-outline" style="display:inline-flex; align-items:center; gap:0.5rem;">
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.22 8.22 0 004.84 1.56V6.8a4.85 4.85 0 01-1.07-.11z"/></svg>
-    Ver canal completo →
-  </a>
-</section>
-
-<!-- 04 · QUIÉN SOY -->
-<section id="quien-soy">
-  <span class="section-num">04 · Quién lo da</span>
-  <h2>Emiliano Bugliolo</h2>
-  <div class="inst">
-    <img src="emibuglioloperfil.jpg" alt="Emiliano Bugliolo, creador del Método ONDA para adopción de IA en PyMEs argentinas" class="inst-photo">
+<!-- HERO -->
+<section class="hero" id="inicio" style="border-bottom:none">
+  <div class="grid-bg"></div><div class="glow"></div>
+  <div class="wrap hero-grid">
     <div>
-      <p class="inst-role">El puente entre los dueños de negocios y la IA</p>
-      <p class="inst-bio">
-        Socio operativo de una empresa familiar con más de 70 años en el mercado. Más de 20 años tomando decisiones reales desde adentro: finanzas, procesos, conflictos y transformación digital.<br><br>
-        Entiendo los dos lados: el de la empresa y el de la tecnología. Mi trabajo es hacer que ese puente sea simple de cruzar. Creador del <strong style="color:var(--white)">Método ONDA</strong> y del podcast <strong style="color:var(--white)">"Desde el Garage"</strong> para dueños de PyMEs.
-      </p>
-      <div class="link-row">
-        <a href="https://emibugliolo.com/" target="_blank" rel="noopener" class="link-pill">🌐 emibugliolo.com</a>
-        <a href="https://www.linkedin.com/in/emilianobugliolo/" target="_blank" rel="noopener" class="link-pill">💼 LinkedIn</a>
-        <a href="https://open.spotify.com/show/desdeelgarage" target="_blank" rel="noopener" class="link-pill">🎙️ Podcast</a>
+      <span class="eyebrow"><span class="dot"></span>Charlas y capacitaciones online de IA</span>
+      <h1>IA aplicada al negocio, explicada por alguien que <em>opera uno.</em></h1>
+      <p class="lead">Charlas y capacitaciones online para dueños, directivos y equipos de PyMEs. Sin tecnicismos ni humo: qué hacer con la IA el lunes a la mañana, con el <strong>Método ONDA</strong> de Emiliano Bugliolo.</p>
+      <div class="hero-ctas">
+        <a class="btn" data-cta="hero" href="https://wa.me/5491125534340?text=Hola%20Emiliano%2C%20quiero%20coordinar%20una%20charla%20o%20capacitaci%C3%B3n%20online%20de%20Aprendeia." target="_blank" rel="noopener">Coordinar una charla
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn btn-ghost" href="#charlas">Ver temarios</a>
+      </div>
+      <div class="hero-meta"><span>100% online, en vivo</span><span>Para equipos y eventos</span><span>Toda Latinoamérica</span></div>
+    </div>
+
+    <div class="term" role="img" aria-label="Representación del Método ONDA ejecutándose sobre una PyME: Observar, Normar, Desarrollar y Autonomizar">
+      <div class="term-bar"><i></i><i></i><i></i><b>aprendeia — metodo-onda</b></div>
+      <div class="term-body" aria-hidden="true">
+        <p><span class="c-acc">$</span> <span class="c-w">onda run</span> <span class="c-y">--empresa</span> "tu-pyme"</p>
+        <p class="c-mut"># sin tecnicismos · foco en rentabilidad</p>
+        <p><span class="c-acc">✓</span> <span class="c-w">O</span>bservar &nbsp;&nbsp;<span class="c-mut">5 procesos críticos mapeados</span></p>
+        <p><span class="c-acc">✓</span> <span class="c-w">N</span>ormar &nbsp;&nbsp;&nbsp;&nbsp;<span class="c-mut">procesos escritos, con dueño</span></p>
+        <p><span class="c-acc">✓</span> <span class="c-w">D</span>esarrollar <span class="c-mut">piloto IA · −horas, −errores</span></p>
+        <p><span class="c-y">▸</span> <span class="c-w">A</span>utonomizar <span class="c-mut">el equipo opera sin vos</span></p>
+        <p><span class="c-acc">$</span> <span class="cursor"></span></p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 05 · RECURSOS GRATIS -->
+<!-- PROOF -->
+<div class="strip">
+  <div class="wrap strip-grid">
+    <div class="stat"><b>+20 años</b><span>tomando decisiones dentro de una empresa familiar</span></div>
+    <div class="stat"><b>+70 años</b><span>de historia de la empresa que opera</span></div>
+    <div class="stat"><b>4 fases</b><span>Método ONDA, propio y probado en su operación</span></div>
+    <div class="stat"><b>100% online</b><span>en vivo por Zoom, Meet o Teams</span></div>
+  </div>
+</div>
+
+<!-- QUÉ ES -->
+<section id="que-es">
+  <div class="wrap">
+    <span class="label">// qué es aprendeia</span>
+    <h2>Formación en IA para empresas reales. No para programadores.</h2>
+    <p class="sub">La mayoría de las charlas de IA muestran herramientas. Acá se trabaja lo que viene antes: qué proceso conviene mejorar, cómo ordenarlo y cómo medir si la IA realmente ahorra tiempo y plata.</p>
+    <div class="def">
+      <article class="def-card main">
+        <span class="tag">aprendeia.com.ar · formación</span>
+        <h3>Aprendeia</h3>
+        <p><strong>Aprendeia es la unidad de formación de Emiliano Bugliolo</strong>: charlas y capacitaciones online sobre adopción de inteligencia artificial para dueños, directivos y equipos de PyMEs y empresas familiares de habla hispana.</p>
+        <p>Formato en vivo, lenguaje de negocio y ejemplos de operación real.</p>
+      </article>
+      <article class="def-card">
+        <span class="tag">emibugliolo.com · consultoría</span>
+        <h3>¿Necesitás implementación, no capacitación?</h3>
+        <p>Para profesionalizar, ordenar procesos e implementar sistemas dentro de tu empresa, Emiliano trabaja como consultor estratégico en <a href="https://www.emibugliolo.com/" target="_blank" rel="noopener" style="color:var(--acc)">emibugliolo.com</a>.</p>
+        <p>Aprendeia enseña el camino. La consultoría lo recorre con vos.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- FORMATOS -->
+<section id="formatos">
+  <div class="wrap">
+    <span class="label">// formatos</span>
+    <h2>Tres formatos. Todos online y en vivo.</h2>
+    <p class="sub">Se adaptan al tamaño del grupo y al objetivo: inspirar, capacitar o salir con un plan de acción.</p>
+    <div class="formats">
+      <article class="fmt">
+        <div class="fmt-top">
+          <div class="fmt-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0014 0M12 18v3"/></svg></div>
+          <span class="chip">45–60 min</span>
+        </div>
+        <h3>Charla online</h3>
+        <p>Para eventos, cámaras empresarias, asociaciones y reuniones de equipo. Una mirada clara y práctica sobre qué hacer con la IA en una PyME.</p>
+        <ul><li>Keynote + preguntas</li><li>Temario a elección</li><li>Sin límite de asistentes</li></ul>
+      </article>
+      <article class="fmt">
+        <div class="fmt-top">
+          <div class="fmt-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4M7 9h6M7 12h10"/></svg></div>
+          <span class="chip">2–4 sesiones</span>
+        </div>
+        <h3>Capacitación in-company</h3>
+        <p>Para equipos de una empresa. Se trabaja sobre los procesos reales del cliente para que cada área salga con casos de uso concretos.</p>
+        <ul><li>Programa a medida</li><li>Ejercicios aplicados</li><li>Material de apoyo</li></ul>
+      </article>
+      <article class="fmt">
+        <div class="fmt-top">
+          <div class="fmt-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.3"/><path d="M3 19c0-3 2.7-5 6-5s6 2 6 5M15 14.5c2.8-.4 6 1 6 4"/></svg></div>
+          <span class="chip">grupo reducido</span>
+        </div>
+        <h3>Workshop para dueños</h3>
+        <p>Taller con el Método ONDA para dueños y directivos: diagnóstico, priorización y un plan de adopción de IA para empezar a ejecutar.</p>
+        <ul><li>Diagnóstico guiado</li><li>Plan de acción propio</li><li>Cupos limitados</li></ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- CHARLAS -->
+<section id="charlas">
+  <div class="wrap">
+    <span class="label">// temarios disponibles</span>
+    <h2>Charlas que se pueden contratar hoy.</h2>
+    <p class="sub">Cada temario se ajusta al público: dueños, mandos medios o equipos operativos.</p>
+    <div class="talks">
+      <article class="talk">
+        <span class="talk-n">01</span>
+        <div>
+          <h3>IA sin humo para dueños de PyMEs: por dónde empezar</h3>
+          <p>Qué puede hacer hoy la IA en una PyME, qué no, y cuál es el primer paso con impacto económico real. Para dejar de mirar herramientas y empezar a decidir.</p>
+          <div class="talk-tags"><span class="chip">dueños</span><span class="chip">introductoria</span></div>
+        </div>
+        <span class="talk-dur">45–60 min</span>
+      </article>
+      <article class="talk">
+        <span class="talk-n">02</span>
+        <div>
+          <h3>Método ONDA: adoptar IA sin desordenar tu empresa</h3>
+          <p>Las 4 fases para implementar IA de forma sostenible: Observar, Normar, Desarrollar y Autonomizar. Con ejemplos de operación real.</p>
+          <div class="talk-tags"><span class="chip">dueños y directivos</span><span class="chip">metodología</span></div>
+        </div>
+        <span class="talk-dur">60 min</span>
+      </article>
+      <article class="talk">
+        <span class="talk-n">03</span>
+        <div>
+          <h3>Procesos antes que herramientas: por qué tu IA no funciona</h3>
+          <p>La IA solo mejora lo que está escrito. Cómo documentar procesos críticos, asignar responsables y recién después automatizar.</p>
+          <div class="talk-tags"><span class="chip">equipos</span><span class="chip">operaciones</span></div>
+        </div>
+        <span class="talk-dur">45–60 min</span>
+      </article>
+      <article class="talk">
+        <span class="talk-n">04</span>
+        <div>
+          <h3>Empresa familiar + IA: profesionalizar sin perder la esencia</h3>
+          <p>Roles, decisiones y dependencia del fundador. Cómo usar la IA como palanca de profesionalización en empresas familiares.</p>
+          <div class="talk-tags"><span class="chip">empresas familiares</span><span class="chip">cámaras</span></div>
+        </div>
+        <span class="talk-dur">60 min</span>
+      </article>
+      <article class="talk">
+        <span class="talk-n">05</span>
+        <div>
+          <h3>Automatización mínima viable: tu primer proceso con IA</h3>
+          <p>Cómo elegir un único proceso, probar con un piloto chico y medir antes y después en tiempo, costo y errores.</p>
+          <div class="talk-tags"><span class="chip">equipos</span><span class="chip">práctica</span></div>
+        </div>
+        <span class="talk-dur">60–90 min</span>
+      </article>
+      <article class="talk">
+        <span class="talk-n">06</span>
+        <div>
+          <h3>Que la IA te recomiende: visibilidad de tu negocio en ChatGPT y Google</h3>
+          <p>Cómo cambian las búsquedas con la IA generativa y qué hacer para que tu empresa aparezca cuando un cliente le pregunta a una IA.</p>
+          <div class="talk-tags"><span class="chip">marketing</span><span class="chip">GEO</span></div>
+        </div>
+        <span class="talk-dur">45–60 min</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- MÉTODO ONDA -->
+<section id="metodo-onda">
+  <div class="wrap">
+    <span class="label">// metodología propia</span>
+    <h2>Método ONDA: el orden correcto para adoptar IA.</h2>
+    <p class="sub">El Método ONDA es la metodología de Emiliano Bugliolo para adoptar inteligencia artificial en PyMEs. Cuatro fases, en orden. No se salta ninguna.</p>
+    <div class="onda">
+      <article class="phase">
+        <div class="phase-l">O</div><span class="phase-k">fase 1</span>
+        <h3>Observar</h3>
+        <p>Diagnóstico real: procesos que más tiempo consumen, tareas repetitivas y decisiones improvisadas.</p>
+        <div class="res"><b>resultado</b>Sabés dónde está el caos y dónde impacta primero la IA.</div>
+      </article>
+      <article class="phase">
+        <div class="phase-l">N</div><span class="phase-k">fase 2</span>
+        <h3>Normar</h3>
+        <p>Documentar procesos, definir responsables y tiempos. La IA solo mejora lo que está escrito.</p>
+        <div class="res"><b>resultado</b>La operación funciona sin que estés explicando todo.</div>
+      </article>
+      <article class="phase">
+        <div class="phase-l">D</div><span class="phase-k">fase 3</span>
+        <h3>Desarrollar</h3>
+        <p>Un proceso, un piloto chico, medición de antes y después: tiempo, costo y errores.</p>
+        <div class="res"><b>resultado</b>Primera automatización funcionando y medida.</div>
+      </article>
+      <article class="phase">
+        <div class="phase-l">A</div><span class="phase-k">fase 4</span>
+        <h3>Autonomizar</h3>
+        <p>El equipo opera las herramientas, con un responsable y métricas mensuales.</p>
+        <div class="res"><b>resultado</b>IA sostenible y un dueño enfocado en estrategia.</div>
+      </article>
+    </div>
+    <p class="onda-note">→ Descargá la hoja de ruta completa más abajo.</p>
+  </div>
+</section>
+
+<!-- PARA QUIÉN + CÓMO -->
+<section id="para-quien">
+  <div class="wrap two">
+    <div>
+      <span class="label">// para quién</span>
+      <h2>Quién contrata Aprendeia.</h2>
+      <ul class="aud">
+        <li><b>Cámaras y asociaciones empresarias</b><span>Charlas para socios que necesitan entender la IA en lenguaje de negocio.</span></li>
+        <li><b>Empresas y PyMEs</b><span>Capacitación para que el equipo use IA con criterio, no por moda.</span></li>
+        <li><b>Eventos, congresos y aceleradoras</b><span>Un speaker que habla desde la operación, no desde la teoría.</span></li>
+        <li><b>Dueños y directivos</b><span>Workshops para salir con un plan propio de adopción.</span></li>
+      </ul>
+    </div>
+    <div>
+      <span class="label">// cómo se coordina</span>
+      <h2>Tres pasos. Sin vueltas.</h2>
+      <ol class="steps">
+        <li><div><b>Escribís por WhatsApp</b><span>Contás público, fecha tentativa y objetivo de la charla.</span></div></li>
+        <li><div><b>Recibís una propuesta</b><span>Temario adaptado, formato, duración y honorarios.</span></div></li>
+        <li><div><b>Charla online en vivo</b><span>Por Zoom, Meet o Teams, con espacio de preguntas y material de apoyo.</span></div></li>
+      </ol>
+      <div style="margin-top:2rem">
+        <a class="btn" data-cta="pasos" href="https://wa.me/5491125534340?text=Hola%20Emiliano%2C%20quiero%20coordinar%20una%20charla%20o%20capacitaci%C3%B3n%20online%20de%20Aprendeia." target="_blank" rel="noopener">Coordinar una charla
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUIÉN -->
+<section id="emiliano">
+  <div class="wrap about">
+    <figure class="photo">
+      <img src="emiliano-bugliolo.webp" width="560" height="700" loading="lazy" decoding="async" alt="Emiliano Bugliolo, speaker y capacitador en inteligencia artificial para PyMEs, creador del Método ONDA">
+      <figcaption>Emiliano Bugliolo · Buenos Aires</figcaption>
+    </figure>
+    <div class="about-txt">
+      <span class="label">// quién la da</span>
+      <h2>Emiliano Bugliolo</h2>
+      <p><strong>Emiliano Bugliolo es speaker y capacitador en inteligencia artificial aplicada a PyMEs</strong>, y consultor en profesionalización de empresas familiares. Es socio operativo de una empresa familiar argentina con más de 70 años en el mercado.</p>
+      <p>Lleva más de 20 años tomando decisiones desde adentro: finanzas, procesos, conflictos familiares y transformación digital. Además desarrolla proyectos propios de e-commerce, eventos, renta temporaria y productos digitales. Por eso enseña IA desde la operación, no desde la teoría.</p>
+      <ul class="creds">
+        <li><b>Creador</b> del Método ONDA</li>
+        <li><b>Conductor</b> del podcast Desde el Garage</li>
+        <li><b>+20 años</b> en empresa familiar</li>
+        <li><b>Emprendedor</b> en 4 rubros</li>
+      </ul>
+      <div class="links">
+        <a href="https://www.emibugliolo.com/" target="_blank" rel="noopener me">emibugliolo.com ↗</a>
+        <a href="https://www.linkedin.com/in/emilianobugliolo/" target="_blank" rel="noopener me">LinkedIn ↗</a>
+        <a href="https://www.youtube.com/@emibugliolo" target="_blank" rel="noopener me">YouTube ↗</a>
+        <a href="https://www.instagram.com/emibugliolo/" target="_blank" rel="noopener me">Instagram ↗</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VIDEOS -->
+<section id="videos">
+  <div class="wrap">
+    <span class="label">// desde el garage</span>
+    <h2>Conversaciones sobre IA y negocios.</h2>
+    <p class="sub">Entrevistas del podcast Desde el Garage con referentes de tecnología, marketing y empresas.</p>
+    <div class="videos">
+      <a class="vid" href="https://youtu.be/jpWUrPu2MQo" target="_blank" rel="noopener">
+        <div class="vid-th"><img src="https://i.ytimg.com/vi/jpWUrPu2MQo/hqdefault.jpg" width="480" height="270" loading="lazy" decoding="async" alt="Cómo escalar tu PyME con Growth Marketing e IA, con Federico Feres"></div>
+        <p>Cómo escalar tu PyME con Growth Marketing e IA — Federico Feres</p>
+      </a>
+      <a class="vid" href="https://www.youtube.com/watch?v=cos03T1Ze8M" target="_blank" rel="noopener">
+        <div class="vid-th"><img src="https://i.ytimg.com/vi/cos03T1Ze8M/hqdefault.jpg" width="480" height="270" loading="lazy" decoding="async" alt="IA para PyMEs: cómo arrancar sin perderte, con Ragaco"></div>
+        <p>IA para PyMEs: cómo arrancar sin perderte — Ragaco</p>
+      </a>
+      <a class="vid" href="https://www.youtube.com/watch?v=9lQ_UxP0ky8" target="_blank" rel="noopener">
+        <div class="vid-th"><img src="https://i.ytimg.com/vi/9lQ_UxP0ky8/hqdefault.jpg" width="480" height="270" loading="lazy" decoding="async" alt="De director en Google a VP de Pinterest, con Marcos Westphalen"></div>
+        <p>De director en Google a VP de Pinterest — Marcos Westphalen</p>
+      </a>
+      <a class="vid" href="https://www.youtube.com/watch?v=_0q1_nBAGys" target="_blank" rel="noopener">
+        <div class="vid-th"><img src="https://i.ytimg.com/vi/_0q1_nBAGys/hqdefault.jpg" width="480" height="270" loading="lazy" decoding="async" alt="Cómo hacer visible tu negocio y atraer más clientes con IA"></div>
+        <p>Cómo hacer visible tu negocio y atraer clientes con IA</p>
+      </a>
+    </div>
+    <a class="btn btn-ghost" href="https://www.youtube.com/@emibugliolo" target="_blank" rel="noopener">Ver canal completo ↗</a>
+  </div>
+</section>
+
+<!-- RECURSO -->
 <section id="hoja-de-ruta">
-  <span class="section-num">05 · Recursos gratuitos</span>
-  <h2>Desbloqueá los recursos.</h2>
-  <p class="section-sub">
-    Completá el formulario y accedé a la <strong style="color:var(--white)">Hoja de Ruta del Método ONDA</strong> y a los próximos recursos que voy sumando.
-  </p>
-
-  <!-- Grid de recursos bloqueados -->
-  <div class="resources-grid">
-    <div class="resource-card unlocked">
-      <div class="resource-icon">📋</div>
-      <div class="resource-name">Hoja de Ruta — Método ONDA</div>
-      <div class="resource-badge">Disponible</div>
+  <div class="wrap">
+    <div class="res-box">
+      <div>
+        <span class="label">// recurso gratuito</span>
+        <h2>Hoja de Ruta del Método ONDA.</h2>
+        <p class="sub">Las 4 fases con el checklist de cada una, en PDF. Es el mismo punto de partida que se usa en las capacitaciones.</p>
+      </div>
+      <div>
+        <div data-dp-form="G5VvMx%2bpMg9qnsGzLxUUuA%3d%3d"></div>
+        <p class="form-note">Sin spam. Solo recursos nuevos.</p>
+      </div>
     </div>
-    <div class="resource-card locked">
-      <div class="resource-icon">🔒</div>
-      <div class="resource-name">Checklist de Diagnóstico PyME</div>
-      <div class="resource-badge coming">Próximamente</div>
-    </div>
-    <div class="resource-card locked">
-      <div class="resource-icon">🔒</div>
-      <div class="resource-name">Guía de Automatización Mínima</div>
-      <div class="resource-badge coming">Próximamente</div>
-    </div>
-    <div class="resource-card locked">
-      <div class="resource-icon">🔒</div>
-      <div class="resource-name">Prompts para Dueños de PyMEs</div>
-      <div class="resource-badge coming">Próximamente</div>
-    </div>
-  </div>
-
-  <!-- Doopler nativo -->
-  <div class="dp-native-wrap">
-    <p class="unlock-title">Dejá tu nombre y email para recibir los recursos</p>
-    <div data-dp-form="G5VvMx%2bpMg9qnsGzLxUUuA%3d%3d"></div>
-    <p class="form-note">Sin spam. Te aviso cuando sumo nuevos recursos.</p>
   </div>
 </section>
 
-<style>
-.resources-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 0.85rem;
-  margin-bottom: 1.75rem;
-}
-
-.resource-card {
-  background: var(--surface);
-  border: 0.5px solid var(--border);
-  border-radius: 10px;
-  padding: 1.25rem 1.25rem 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 0.5rem;
-  transition: border-color 0.2s;
-}
-
-.resource-card.unlocked {
-  border-color: var(--border-accent);
-  background: linear-gradient(135deg, rgba(0,229,160,0.06) 0%, var(--surface) 100%);
-}
-
-.resource-card.locked {
-  opacity: 0.55;
-}
-
-.resource-icon {
-  font-size: 1.4rem;
-}
-
-.resource-name {
-  font-family: 'Nunito', sans-serif;
-  font-size: 0.88rem;
-  font-weight: 700;
-  color: var(--white);
-  line-height: 1.3;
-}
-
-.resource-badge {
-  font-size: 0.68rem;
-  font-weight: 500;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--accent);
-  background: var(--accent-dim);
-  border: 0.5px solid var(--border-accent);
-  border-radius: 100px;
-  padding: 0.2rem 0.65rem;
-}
-
-.resource-badge.coming {
-  color: var(--muted);
-  background: var(--surface2);
-  border-color: var(--border);
-}
-
-.unlock-box {
-  background: var(--surface);
-  border: 0.5px solid var(--border-accent);
-  border-radius: 12px;
-  padding: 1.75rem;
-}
-
-.unlock-title {
-  font-family: 'Nunito', sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  color: var(--white);
-  margin-bottom: 1.25rem;
-}
-
-.unlock-form {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-}
-
-.unlock-success {
-  background: var(--surface);
-  border: 0.5px solid var(--border-accent);
-  border-radius: 12px;
-  padding: 2rem;
-  text-align: center;
-}
-
-@media (max-width: 600px) {
-  .resources-grid { grid-template-columns: 1fr; }
-}
-</style>
-
-
-<!-- 06 · CONTACTO -->
-<section id="contacto">
-  <span class="section-num">06 · Contacto</span>
-  <h2>Empezá a cruzar el puente.</h2>
-  <p class="section-sub">Si querés cambiar el chip y empezar a implementar IA en tu negocio de manera simple, escribime. Sin compromiso.</p>
-
-  <div class="contact-row">
-    <a href="https://wa.me/5491125534340?text=Hola%20Emiliano%2C%20quiero%20saber%20m%C3%A1s%20sobre%20Aprendeia" target="_blank" rel="noopener" class="contact-item">
-      <div class="contact-icon">💬</div>
-      <span>WhatsApp — Escribime directo</span>
-    </a>
-    <a href="https://www.linkedin.com/in/emilianobugliolo/" target="_blank" rel="noopener" class="contact-item">
-      <div class="contact-icon">💼</div>
-      <span>LinkedIn — Emiliano Bugliolo</span>
-    </a>
-    <a href="https://emibugliolo.com/" target="_blank" rel="noopener" class="contact-item">
-      <div class="contact-icon">🌐</div>
-      <span>emibugliolo.com</span>
-    </a>
+<!-- FAQ -->
+<section id="faq">
+  <div class="wrap">
+    <span class="label">// preguntas frecuentes</span>
+    <h2>Preguntas frecuentes.</h2>
+    <div class="faq" style="margin-top:2.5rem">
+      <details open><summary>¿Qué es Aprendeia?</summary><p>Aprendeia es la unidad de formación de Emiliano Bugliolo. Ofrece charlas y capacitaciones online de inteligencia artificial para dueños, directivos y equipos de PyMEs y empresas familiares de habla hispana, con foco en aplicación práctica y sin tecnicismos.</p></details>
+      <details><summary>¿Quién da las charlas y capacitaciones?</summary><p>Emiliano Bugliolo, socio operativo de una empresa familiar argentina con más de 70 años en el mercado, con más de 20 años de experiencia en negocios reales y creador del Método ONDA para adoptar IA en PyMEs.</p></details>
+      <details><summary>¿Son online o presenciales?</summary><p>Son 100% online y en vivo, por Zoom, Google Meet o Microsoft Teams. Se pueden contratar desde cualquier país de habla hispana.</p></details>
+      <details><summary>¿Hace falta saber programación o tener un equipo de tecnología?</summary><p>No. El enfoque es de negocio: qué procesos conviene mejorar con IA, cómo ordenarlos y cómo medir el resultado. Las herramientas se muestran aplicadas a casos reales de PyMEs.</p></details>
+      <details><summary>¿Qué es el Método ONDA?</summary><p>Es la metodología de Emiliano Bugliolo para adoptar IA en PyMEs en 4 fases: Observar (diagnóstico), Normar (documentar procesos), Desarrollar (piloto de IA medido) y Autonomizar (el equipo opera sin depender del dueño).</p></details>
+      <details><summary>¿Cuánto cuesta una charla o capacitación?</summary><p>Depende del formato, la duración y la cantidad de participantes. Se envía una propuesta con temario, formato y honorarios después de una breve conversación por WhatsApp.</p></details>
+      <details><summary>¿Cuál es la diferencia entre Aprendeia y emibugliolo.com?</summary><p>Aprendeia se enfoca en formación: charlas y capacitaciones online. En <a href="https://www.emibugliolo.com/" target="_blank" rel="noopener" style="color:var(--acc)">emibugliolo.com</a> Emiliano Bugliolo ofrece consultoría estratégica e implementación para profesionalizar y estructurar PyMEs.</p></details>
+    </div>
   </div>
 </section>
 
-<!-- FOOTER -->
+<!-- CTA FINAL -->
+<section class="final">
+  <div class="glow"></div>
+  <div class="wrap">
+    <span class="label">// siguiente paso</span>
+    <h2>¿Tu equipo o tu evento necesita entender la IA en lenguaje de negocio?</h2>
+    <p class="sub">Escribime con el público, la fecha tentativa y el objetivo. Te respondo con una propuesta concreta.</p>
+    <a class="btn" data-cta="final" href="https://wa.me/5491125534340?text=Hola%20Emiliano%2C%20quiero%20coordinar%20una%20charla%20o%20capacitaci%C3%B3n%20online%20de%20Aprendeia." target="_blank" rel="noopener">Coordinar una charla
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+  </div>
+</section>
+
+</main>
+
 <footer>
-  <p>© 2026 <a href="/">aprendeia.com.ar</a> · <a href="https://www.emibugliolo.com/" target="_blank" rel="noopener">Emiliano Bugliolo</a></p>
-  <p>Todos los derechos reservados</p>
+  <div class="wrap foot">
+    <p>© <span id="y">2026</span> Aprendeia · Charlas y capacitaciones online de IA · por <a href="https://www.emibugliolo.com/" target="_blank" rel="noopener">Emiliano Bugliolo</a></p>
+    <p>Actualizado: <time datetime="2026-11-25">noviembre 2026</time> · <a href="/llms.txt">llms.txt</a></p>
+  </div>
 </footer>
 
-<!-- WHATSAPP FLOAT -->
-<a class="wa-float" href="https://wa.me/5491125534340?text=Hola%20Emiliano%2C%20quiero%20saber%20m%C3%A1s%20sobre%20Aprendeia" target="_blank" rel="noopener" aria-label="Consultar por WhatsApp">
-  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-  </svg>
-</a>
+<div class="mbar">
+  <a class="btn" data-cta="mobile-bar" href="https://wa.me/5491125534340?text=Hola%20Emiliano%2C%20quiero%20coordinar%20una%20charla%20o%20capacitaci%C3%B3n%20online%20de%20Aprendeia." target="_blank" rel="noopener">Coordinar una charla →</a>
+</div>
 
+<script>
+document.getElementById('y').textContent=new Date().getFullYear();
+document.querySelectorAll('[data-cta]').forEach(function(a){a.addEventListener('click',function(){
+  if(window.gtag)gtag('event','generate_lead',{method:'whatsapp',cta_position:a.dataset.cta});
+});});
+
+</script>
 </body>
 </html>

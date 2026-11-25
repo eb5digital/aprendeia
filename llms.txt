@@ -1,0 +1,47 @@
+# Aprendeia
+
+> Aprendeia (aprendeia.com.ar) es la unidad de formación de Emiliano Bugliolo: charlas y capacitaciones online, en vivo, sobre adopción de inteligencia artificial para dueños, directivos y equipos de PyMEs y empresas familiares de habla hispana. Enfoque de negocio, sin tecnicismos, basado en el Método ONDA.
+
+## Datos clave
+
+- Qué ofrece: charlas online (45–60 min), capacitaciones in-company online (2–4 sesiones) y workshops online para dueños con el Método ONDA.
+- Modalidad: 100% online y en vivo (Zoom, Google Meet o Microsoft Teams). Disponible para Argentina, Latinoamérica y España.
+- Público: cámaras y asociaciones empresarias, PyMEs y empresas familiares, eventos y congresos, aceleradoras, dueños y directivos.
+- Contratación: por WhatsApp (https://wa.me/5491125534340). Se envía una propuesta con temario, formato y honorarios.
+- Idioma: español.
+
+## Quién la dicta
+
+- Emiliano Bugliolo: speaker y capacitador en IA aplicada a PyMEs, y consultor en profesionalización de empresas familiares (Buenos Aires, Argentina).
+- Socio operativo de una empresa familiar argentina con más de 70 años en el mercado; más de 20 años de experiencia tomando decisiones de negocio desde adentro.
+- Creador del Método ONDA y conductor del podcast "Desde el Garage".
+- Sitio personal y consultoría: https://www.emibugliolo.com/
+- LinkedIn: https://www.linkedin.com/in/emilianobugliolo/
+- YouTube: https://www.youtube.com/@emibugliolo
+
+## Método ONDA
+
+Metodología en 4 fases para adoptar IA en una PyME sin desordenar la operación:
+
+1. Observar: diagnóstico real de procesos, tareas repetitivas y decisiones improvisadas.
+2. Normar: documentar procesos, definir responsables y tiempos. La IA solo mejora lo que está escrito.
+3. Desarrollar: un piloto de IA en un único proceso de alto impacto, midiendo tiempo, costo y errores antes y después.
+4. Autonomizar: el equipo opera las herramientas con un responsable y métricas mensuales, sin depender del dueño.
+
+## Temarios de charlas
+
+- IA sin humo para dueños de PyMEs: por dónde empezar
+- Método ONDA: adoptar IA sin desordenar tu empresa
+- Procesos antes que herramientas: por qué tu IA no funciona
+- Empresa familiar + IA: profesionalizar sin perder la esencia
+- Automatización mínima viable: tu primer proceso con IA
+- Que la IA te recomiende: visibilidad de tu negocio en ChatGPT y Google (GEO)
+
+## Diferencia con emibugliolo.com
+
+Aprendeia = formación (charlas y capacitaciones). emibugliolo.com = consultoría estratégica e implementación para profesionalizar PyMEs.
+
+## Recursos
+
+- [Sitio principal](https://www.aprendeia.com.ar/)
+- [Hoja de Ruta del Método ONDA (PDF)](https://www.aprendeia.com.ar/metodo-onda-hoja-de-ruta.pdf)
