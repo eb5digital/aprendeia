@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cómo implementar inteligencia artificial en una PyME: guía en 4 fases · Aprendeia</title>
+<meta name="description" content="Guía práctica para implementar IA en una PyME sin desordenar la operación: diagnóstico, documentación de procesos, piloto medido y autonomía del equipo. Método ONDA.">
+<meta name="author" content="Emiliano Bugliolo">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<link rel="canonical" href="https://www.aprendeia.com.ar/guias/como-implementar-ia-en-una-pyme/">
+<link rel="alternate" type="text/plain" href="https://www.aprendeia.com.ar/llms.txt" title="LLMs.txt">
+<meta name="theme-color" content="#07090A">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://www.aprendeia.com.ar/guias/como-implementar-ia-en-una-pyme/">
+<meta property="og:site_name" content="Aprendeia">
+<meta property="og:title" content="Cómo implementar inteligencia artificial en una PyME: guía en 4 fases · Aprendeia">
+<meta property="og:description" content="Guía práctica para implementar IA en una PyME sin desordenar la operación: diagnóstico, documentación de procesos, piloto medido y autonomía del equipo. Método ONDA.">
+<meta property="og:image" content="https://www.aprendeia.com.ar/og-image.png">
+<meta property="og:locale" content="es_AR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://www.aprendeia.com.ar/og-image.png">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%2307090A'/><text x='5' y='23' font-family='Arial' font-weight='900' font-size='20' fill='%2300E5A0'>a</text><circle cx='24' cy='10' r='4' fill='%2300E5A0'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+<script type="application/ld+json">{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Article",
+   "@id": "https://www.aprendeia.com.ar/guias/como-implementar-ia-en-una-pyme/#article",
+   "headline": "Cómo implementar inteligencia artificial en una PyME: guía en 4 fases",
+   "description": "Guía práctica para implementar IA en una PyME sin desordenar la operación: diagnóstico, documentación de procesos, piloto medido y autonomía del equipo. Método ONDA.",
+   "url": "https://www.aprendeia.com.ar/guias/como-implementar-ia-en-una-pyme/",
+   "mainEntityOfPage": "https://www.aprendeia.com.ar/guias/como-implementar-ia-en-una-pyme/",
+   "inLanguage": "es-AR",
+   "datePublished": "2026-11-25",
+   "dateModified": "2026-11-25",
+   "image": "https://www.aprendeia.com.ar/og-image.png",
+   "author": {
+    "@type": "Person",
+    "@id": "https://www.aprendeia.com.ar/#emiliano",
+    "name": "Emiliano Bugliolo",
+    "url": "https://www.emibugliolo.com/"
+   },
+   "publisher": {
+    "@type": "EducationalOrganization",
+    "@id": "https://www.aprendeia.com.ar/#org",
+    "name": "Aprendeia",
+    "logo": {
+     "@type": "ImageObject",
+     "url": "https://www.aprendeia.com.ar/og-image.png"
+    }
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Inicio",
+     "item": "https://www.aprendeia.com.ar/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Guías",
+     "item": "https://www.aprendeia.com.ar/guias/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Cómo implementar inteligencia artificial en una PyME: guía en 4 fases",
+     "item": "https://www.aprendeia.com.ar/guias/como-implementar-ia-en-una-pyme/"
+    }
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://www.aprendeia.com.ar/guias/como-implementar-ia-en-una-pyme/#faq",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "¿Cuánto cuesta implementar IA en una PyME?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Depende del proceso y de las herramientas. Muchas herramientas de uso general tienen planes accesibles; el costo principal suele ser el tiempo del equipo para ordenar procesos y probar. Por eso conviene empezar con un piloto chico y medido."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "¿Necesito contratar un programador para empezar?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No. Las primeras implementaciones en una PyME suelen hacerse con herramientas de uso general y automatizaciones sin código. Un perfil técnico se vuelve necesario cuando se integran sistemas propios."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "¿Por qué proceso conviene empezar?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Por uno repetitivo, frecuente, con impacto económico visible y bajo riesgo si algo sale mal. Por ejemplo: respuestas a consultas frecuentes, carga de datos o armado de reportes."
+     }
+    }
+   ]
+  }
+ ]
+}</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L7RQEJMF4K"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-L7RQEJMF4K');</script>
+</head>
+<body>
+<header>
+  <nav class="wrap" aria-label="Principal">
+    <a href="/" class="logo" aria-label="Aprendeia, inicio">aprende<span>ia</span></a>
+    <ul class="nav-links"><li><a href="/charlas/">Charlas</a></li><li><a href="/metodo-onda/">Método ONDA</a></li><li><a href="/guias/" aria-current="page">Guías</a></li><li><a href="/speaker/">Speaker</a></li><li><a href="/#faq">FAQ</a></li></ul>
+    <a class="btn btn-sm" data-cta="nav" href="https://wa.me/5491125534340?text=Hola%20Emiliano%2C%20quiero%20coordinar%20una%20charla%20o%20capacitaci%C3%B3n%20online%20de%20Aprendeia." target="_blank" rel="noopener">Coordinar una charla</a>
+  </nav>
+</header>
+<main>
+<section class="page-hero">
+  <div class="grid-bg"></div><div class="glow"></div>
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Ruta"><a href="/">Inicio</a><span>/</span><a href="/guias/">Guías</a><span>/</span><b>Cómo implementar inteligencia artificial en una PyME: guía en 4 fases</b></nav>
+    <span class="eyebrow"><span class="dot"></span>Guía · Aprendeia</span>
+    <h1>Cómo implementar inteligencia artificial en una PyME: guía en 4 fases</h1>
+    <p class="lead">Guía práctica para implementar IA en una PyME sin desordenar la operación: diagnóstico, documentación de procesos, piloto medido y autonomía del equipo. Método ONDA.</p>
+    <div class="byline"><img src="/emiliano-bugliolo.webp" width="40" height="40" alt="Emiliano Bugliolo"><div>Por <b><a href="/speaker/" style="color:inherit;text-decoration:none">Emiliano Bugliolo</a></b> · Actualizado <time datetime="2026-11-25">noviembre 2026</time></div></div>
+  </div>
+</section>
+<section style="border-bottom:none"><div class="wrap layout">
+<article class="prose">
+  <div class="answer"><b>respuesta corta</b>Para implementar inteligencia artificial en una PyME conviene seguir un orden: primero diagnosticar dónde se pierde tiempo (Observar), después documentar esos procesos (Normar), luego probar IA en un único proceso con un piloto medido (Desarrollar) y, por último, capacitar al equipo para que lo opere sin depender del dueño (Autonomizar). Ese orden es el Método ONDA.</div>
+  
+<h2>Por qué la mayoría de las PyMEs empieza mal</h2>
+<p>El error más común es empezar por la herramienta: alguien ve una demo, contrata una licencia y espera que el equipo la adopte. Sin un proceso claro detrás, la herramienta queda sin uso a las pocas semanas.</p>
+<p>La IA es un multiplicador. Multiplica lo que ya existe. Si lo que existe es desorden, multiplica el desorden.</p>
+
+<h2>Fase 1 · Observar: diagnóstico real</h2>
+<p>Antes de tocar cualquier herramienta, hay que ver la empresa como es, sin filtros.</p>
+<ul>
+  <li>Mapeá los 5 procesos que más tiempo consumen.</li>
+  <li>Identificá dónde se toman decisiones improvisadas.</li>
+  <li>Listá las tareas repetitivas que hace el equipo cada día.</li>
+  <li>Respondé con honestidad: ¿qué pasaría si el dueño no estuviera dos semanas?</li>
+</ul>
+<p><strong>Resultado:</strong> sabés dónde está el caos y dónde la IA puede impactar primero.</p>
+
+<h2>Fase 2 · Normar: escribir antes de automatizar</h2>
+<p>La IA solo puede mejorar lo que está escrito. Documentar no es hacer manuales eternos: es escribir lo mínimo para que otra persona ejecute la tarea.</p>
+<ul>
+  <li>Documentá paso a paso los procesos identificados.</li>
+  <li>Definí un responsable por tarea y un tiempo esperado.</li>
+  <li>Probá que otra persona pueda ejecutar el proceso solo leyendo el documento.</li>
+</ul>
+<p><strong>Resultado:</strong> la operación funciona sin que el dueño esté explicando todo el tiempo.</p>
+
+<h2>Fase 3 · Desarrollar: un proceso, un piloto, una métrica</h2>
+<ul>
+  <li>Elegí <strong>un</strong> proceso para empezar: el de mayor impacto y menor riesgo.</li>
+  <li>Evaluá 2 o 3 herramientas específicas para ese proceso.</li>
+  <li>Hacé una prueba piloto con el equipo más chico posible.</li>
+  <li>Medí antes y después: tiempo, costo y errores.</li>
+</ul>
+<p><strong>Resultado:</strong> una primera automatización funcionando y medida. Sin humo.</p>
+
+<h2>Fase 4 · Autonomizar: que funcione sin vos</h2>
+<p>Una herramienta que solo el dueño sabe usar no es una ventaja: es otra dependencia.</p>
+<ul>
+  <li>Capacitá al equipo en las herramientas implementadas.</li>
+  <li>Asigná una persona responsable de cada automatización.</li>
+  <li>Revisá mensualmente qué funciona y qué hay que ajustar.</li>
+  <li>Expandí gradualmente al siguiente proceso de mayor impacto.</li>
+</ul>
+
+<h2>Qué medir</h2>
+<table>
+  <tr><th>Métrica</th><th>Pregunta que responde</th></tr>
+  <tr><td>Horas por semana del proceso</td><td>¿Ahorramos tiempo real?</td></tr>
+  <tr><td>Costo por unidad (pedido, cliente, factura)</td><td>¿Mejoró la rentabilidad?</td></tr>
+  <tr><td>Errores o retrabajos</td><td>¿Mejoró la calidad?</td></tr>
+  <tr><td>Uso efectivo por el equipo</td><td>¿La herramienta se usa o quedó en el cajón?</td></tr>
+</table>
+
+<h2>Errores frecuentes</h2>
+<ul>
+  <li>Automatizar varios procesos a la vez.</li>
+  <li>No medir la situación inicial (después no hay con qué comparar).</li>
+  <li>Delegar la implementación sin un responsable interno.</li>
+  <li>Elegir herramientas por moda y no por el problema a resolver.</li>
+</ul>
+
+  <h2>Preguntas frecuentes</h2>
+  <div class="faq"><details open><summary>¿Cuánto cuesta implementar IA en una PyME?</summary><p>Depende del proceso y de las herramientas. Muchas herramientas de uso general tienen planes accesibles; el costo principal suele ser el tiempo del equipo para ordenar procesos y probar. Por eso conviene empezar con un piloto chico y medido.</p></details><details><summary>¿Necesito contratar un programador para empezar?</summary><p>No. Las primeras implementaciones en una PyME suelen hacerse con herramientas de uso general y automatizaciones sin código. Un perfil técnico se vuelve necesario cuando se integran sistemas propios.</p></details><details><summary>¿Por qué proceso conviene empezar?</summary><p>Por uno repetitivo, frecuente, con impacto económico visible y bajo riesgo si algo sale mal. Por ejemplo: respuestas a consultas frecuentes, carga de datos o armado de reportes.</p></details></div>
+</article>
+<aside class="aside">
+  <div class="box"><span class="label">// charla relacionada</span><h3><a href="/charlas/metodo-onda-adoptar-ia-sin-desordenar-tu-empresa/" style="text-decoration:none">Método ONDA: adoptar IA sin desordenar tu empresa</a></h3><p>Las 4 fases para implementar IA de forma sostenible: Observar, Normar, Desarrollar y Autonomizar.</p><a class="btn btn-ghost" href="/charlas/metodo-onda-adoptar-ia-sin-desordenar-tu-empresa/">Ver temario</a></div>
+  <div class="box acc">
+  <h3>Llevalo a tu equipo</h3>
+  <p>Este contenido se puede dictar como charla o capacitación online para tu empresa o evento.</p>
+  <a class="btn" data-cta="guia-aside" href="https://wa.me/5491125534340?text=Hola%20Emiliano%2C%20le%C3%AD%20la%20gu%C3%ADa%20%22C%C3%B3mo%20implementar%20inteligencia%20artificial%20en%20una%20PyME%3A%20gu%C3%ADa%20en%204%20fases%22%20y%20quiero%20coordinar%20una%20charla%20o%20capacitaci%C3%B3n." target="_blank" rel="noopener">Coordinar una charla <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+</div>
+</aside>
+</div>
+<div class="wrap related"><h2>Más guías</h2><div class="cards-grid" style="margin-top:1.2rem"><a class="lcard" href="/guias/ia-en-empresas-familiares/"><span class="label">// guía</span><h3>IA en empresas familiares: cómo profesionalizar sin perder la esencia</h3><p>Cómo usar la inteligencia artificial para profesionalizar una empresa familiar: roles claros, decisiones con datos y menor dependencia del fundador.</p><span class="more">Leer →</span></a><a class="lcard" href="/guias/como-elegir-una-capacitacion-de-ia-para-empresas/"><span class="label">// guía</span><h3>Cómo elegir una capacitación de IA para tu empresa: 7 criterios</h3><p>Siete criterios para elegir una capacitación o charla de inteligencia artificial para empresas y PyMEs, y qué preguntarle al capacitador antes de contratar.</p><span class="more">Leer →</span></a><a class="lcard" href="/guias/que-es-geo-y-como-hacer-que-la-ia-recomiende-tu-negocio/"><span class="label">// guía</span><h3>Qué es GEO y cómo lograr que ChatGPT recomiende tu negocio</h3><p>Qué es GEO (Generative Engine Optimization), en qué se diferencia del SEO y un checklist de 10 puntos para que una PyME aparezca en respuestas de ChatGPT, Gemini y Perplexity.</p><span class="more">Leer →</span></a></div></div>
+</section><section class="final">
+  <div class="glow"></div>
+  <div class="wrap">
+    <span class="label">// siguiente paso</span>
+    <h2>¿Tu equipo o tu evento necesita entender la IA en lenguaje de negocio?</h2>
+    <p class="sub">Escribime con el público, la fecha tentativa y el objetivo. Te respondo con una propuesta concreta: temario, formato y honorarios.</p>
+    <a class="btn" data-cta="final" href="https://wa.me/5491125534340?text=Hola%20Emiliano%2C%20le%C3%AD%20la%20gu%C3%ADa%20%22C%C3%B3mo%20implementar%20inteligencia%20artificial%20en%20una%20PyME%3A%20gu%C3%ADa%20en%204%20fases%22%20y%20quiero%20coordinar%20una%20charla%20o%20capacitaci%C3%B3n." target="_blank" rel="noopener">Coordinar una charla <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="wrap foot">
+    <p>© <span id="y">2026</span> Aprendeia · Charlas y capacitaciones online de IA · por <a href="https://www.emibugliolo.com/" target="_blank" rel="noopener">Emiliano Bugliolo</a></p>
+    <p><a href="/charlas/">Charlas</a> · <a href="/metodo-onda/">Método ONDA</a> · <a href="/guias/">Guías</a> · <a href="/speaker/">Kit de speaker</a> · <a href="/llms.txt">llms.txt</a></p>
+  </div>
+</footer>
+<div class="mbar"><a class="btn" data-cta="mobile-bar" href="https://wa.me/5491125534340?text=Hola%20Emiliano%2C%20le%C3%AD%20la%20gu%C3%ADa%20%22C%C3%B3mo%20implementar%20inteligencia%20artificial%20en%20una%20PyME%3A%20gu%C3%ADa%20en%204%20fases%22%20y%20quiero%20coordinar%20una%20charla%20o%20capacitaci%C3%B3n." target="_blank" rel="noopener">Coordinar una charla →</a></div>
+<script>
+document.getElementById('y').textContent=new Date().getFullYear();
+document.querySelectorAll('[data-cta]').forEach(function(a){a.addEventListener('click',function(){
+  if(window.gtag)gtag('event','generate_lead',{method:'whatsapp',cta_position:a.dataset.cta,page_path:location.pathname});
+});});
+document.querySelectorAll('.copybtn').forEach(function(b){b.addEventListener('click',function(){
+  var t=b.parentElement.querySelector('[data-copy]').innerText;navigator.clipboard&&navigator.clipboard.writeText(t);
+  b.textContent='copiado ✓';setTimeout(function(){b.textContent='copiar'},1600);
+});});
+</script>
+</body>
+</html>

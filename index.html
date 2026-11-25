@@ -32,239 +32,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
-<style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{
-  --bg:#07090A;--bg2:#0D1012;--card:#111518;--line:rgba(255,255,255,.08);--line2:rgba(255,255,255,.14);
-  --txt:#F2F4F3;--mut:#8D9693;--acc:#00E5A0;--acc-d:rgba(0,229,160,.10);--acc-l:rgba(0,229,160,.3);
-  --sans:'Inter',system-ui,-apple-system,sans-serif;--disp:'Space Grotesk',var(--sans);--mono:'JetBrains Mono',ui-monospace,monospace;
-  --w:1120px;
-}
-html{scroll-behavior:smooth;scroll-padding-top:80px;overflow-x:hidden}
-body{font-family:var(--sans);background:var(--bg);color:var(--txt);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-a{color:inherit}
-img{max-width:100%;display:block}
-.wrap{max-width:var(--w);margin:0 auto;padding:0 1.5rem}
-.mono{font-family:var(--mono)}
-strong{color:var(--txt);font-weight:600}
-
-/* background grid */
-.grid-bg{position:absolute;inset:0;z-index:-1;pointer-events:none;
-  background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);
-  background-size:56px 56px;mask-image:radial-gradient(ellipse 80% 70% at 50% 0%,#000 30%,transparent 75%);opacity:.55}
-.glow{position:absolute;z-index:-1;top:-260px;right:-200px;width:760px;height:760px;border-radius:50%;
-  background:radial-gradient(circle,rgba(0,229,160,.13),transparent 62%);pointer-events:none}
-
-/* NAV */
-header{position:sticky;top:0;z-index:50;background:rgba(7,9,10,.78);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
-nav{display:flex;align-items:center;justify-content:space-between;height:64px;gap:1rem}
-.logo{font-family:var(--disp);font-weight:700;font-size:1.2rem;letter-spacing:-.03em;text-decoration:none}
-.logo span{color:var(--acc)}
-.nav-links{display:flex;gap:1.75rem;list-style:none}
-.nav-links a{color:var(--mut);text-decoration:none;font-size:.88rem;transition:color .2s}
-.nav-links a:hover{color:var(--txt)}
-
-/* BUTTONS */
-.btn{display:inline-flex;align-items:center;gap:.55rem;background:var(--acc);color:#04120C;font-weight:600;font-size:.95rem;
-  padding:.85rem 1.5rem;border-radius:8px;text-decoration:none;transition:transform .15s,box-shadow .2s;white-space:nowrap}
-.btn:hover{transform:translateY(-1px);box-shadow:0 8px 30px rgba(0,229,160,.28)}
-.btn-sm{padding:.55rem 1rem;font-size:.85rem}
-.btn-ghost{background:transparent;color:var(--txt);border:1px solid var(--line2)}
-.btn-ghost:hover{border-color:var(--acc-l);box-shadow:none}
-.btn svg{width:16px;height:16px}
-
-/* HERO */
-.hero{position:relative;padding:6rem 0 5rem;isolation:isolate;overflow:hidden}
-.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:3.5rem;align-items:center}
-.eyebrow{display:inline-flex;align-items:center;gap:.55rem;font-family:var(--mono);font-size:.74rem;color:var(--acc);
-  background:var(--acc-d);border:1px solid var(--acc-l);padding:.35rem .8rem;border-radius:100px;margin-bottom:1.6rem;letter-spacing:.02em}
-.dot{width:6px;height:6px;border-radius:50%;background:var(--acc);box-shadow:0 0 0 0 rgba(0,229,160,.6);animation:ping 2s infinite}
-@keyframes ping{0%{box-shadow:0 0 0 0 rgba(0,229,160,.55)}70%{box-shadow:0 0 0 8px rgba(0,229,160,0)}100%{box-shadow:0 0 0 0 rgba(0,229,160,0)}}
-h1{font-family:var(--disp);font-weight:700;font-size:clamp(2.4rem,5.2vw,4rem);line-height:1.04;letter-spacing:-.045em;margin-bottom:1.4rem}
-h1 em{font-style:normal;color:var(--acc)}
-.lead{font-size:1.12rem;color:var(--mut);max-width:560px;margin-bottom:2.2rem}
-.hero-ctas{display:flex;gap:.8rem;flex-wrap:wrap;margin-bottom:2.2rem}
-.hero-meta{display:flex;gap:1.4rem;flex-wrap:wrap;font-family:var(--mono);font-size:.76rem;color:var(--mut)}
-.hero-meta span::before{content:"✓ ";color:var(--acc)}
-
-/* TERMINAL */
-.term{background:linear-gradient(180deg,#0F1416,#0A0D0E);border:1px solid var(--line2);border-radius:14px;overflow:hidden;
-  box-shadow:0 30px 80px rgba(0,0,0,.55),0 0 0 1px rgba(0,229,160,.05) inset}
-.term-bar{display:flex;align-items:center;gap:.45rem;padding:.8rem 1rem;border-bottom:1px solid var(--line);background:rgba(255,255,255,.02)}
-.term-bar i{width:10px;height:10px;border-radius:50%;background:#2A3033}
-.term-bar b{margin-left:.6rem;font-family:var(--mono);font-weight:400;font-size:.72rem;color:var(--mut)}
-.term-body{padding:1.3rem 1.3rem 1.5rem;font-family:var(--mono);font-size:.82rem;line-height:1.95}
-.term-body p{opacity:0;animation:typeIn .4s forwards;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.term-body p:nth-child(1){animation-delay:.2s}.term-body p:nth-child(2){animation-delay:.7s}.term-body p:nth-child(3){animation-delay:1.2s}
-.term-body p:nth-child(4){animation-delay:1.7s}.term-body p:nth-child(5){animation-delay:2.2s}.term-body p:nth-child(6){animation-delay:2.7s}
-.term-body p:nth-child(7){animation-delay:3.3s}
-@keyframes typeIn{from{opacity:0;transform:translateY(3px)}to{opacity:1;transform:none}}
-.c-acc{color:var(--acc)}.c-mut{color:var(--mut)}.c-w{color:var(--txt)}.c-y{color:#E8C468}
-.cursor{display:inline-block;width:8px;height:15px;background:var(--acc);vertical-align:-2px;animation:blink 1s steps(1) infinite}
-@keyframes blink{50%{opacity:0}}
-
-/* PROOF STRIP */
-.strip{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--bg2)}
-.strip-grid{display:grid;grid-template-columns:repeat(4,1fr)}
-.stat{padding:1.6rem 1.25rem;border-right:1px solid var(--line)}
-.stat:last-child{border-right:none}
-.stat b{display:block;font-family:var(--disp);font-size:1.6rem;letter-spacing:-.03em;color:var(--txt);line-height:1.1}
-.stat span{font-size:.82rem;color:var(--mut)}
-
-/* SECTIONS */
-section{padding:6rem 0;border-bottom:1px solid var(--line)}
-.label{font-family:var(--mono);font-size:.74rem;color:var(--acc);letter-spacing:.06em;margin-bottom:1rem;display:block}
-h2{font-family:var(--disp);font-weight:700;font-size:clamp(1.8rem,3.4vw,2.6rem);letter-spacing:-.035em;line-height:1.1;margin-bottom:1rem;max-width:760px}
-.sub{color:var(--mut);font-size:1.04rem;max-width:640px;margin-bottom:3rem}
-h3{font-family:var(--disp);font-weight:600;font-size:1.2rem;letter-spacing:-.02em;line-height:1.25;margin-bottom:.5rem}
-
-/* DEFINITION (GEO) */
-.def{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem}
-.def-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:1.8rem}
-.def-card.main{border-color:var(--acc-l);background:linear-gradient(160deg,rgba(0,229,160,.07),var(--card) 55%)}
-.def-card p{color:var(--mut);font-size:.96rem}
-.def-card p+p{margin-top:.8rem}
-.def-card .tag{font-family:var(--mono);font-size:.7rem;color:var(--mut);margin-bottom:.8rem;display:block}
-.def-card.main .tag{color:var(--acc)}
-
-/* FORMATS */
-.formats{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
-.fmt{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:1.8rem;display:flex;flex-direction:column;transition:border-color .2s,transform .2s}
-.fmt:hover{border-color:var(--acc-l);transform:translateY(-2px)}
-.fmt-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:1.4rem}
-.fmt-ico{width:42px;height:42px;border-radius:10px;background:var(--acc-d);border:1px solid var(--acc-l);display:grid;place-items:center;color:var(--acc)}
-.fmt-ico svg{width:20px;height:20px}
-.chip{font-family:var(--mono);font-size:.68rem;color:var(--mut);border:1px solid var(--line2);border-radius:100px;padding:.2rem .6rem}
-.fmt p{color:var(--mut);font-size:.93rem;margin-bottom:1.2rem}
-.fmt ul{list-style:none;margin-top:auto;border-top:1px solid var(--line);padding-top:1rem;display:grid;gap:.45rem}
-.fmt li{font-size:.85rem;color:var(--mut);font-family:var(--mono)}
-.fmt li::before{content:"→ ";color:var(--acc)}
-
-/* TALKS */
-.talks{display:grid;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:14px;overflow:hidden}
-.talk{display:grid;grid-template-columns:64px 1fr auto;gap:1.5rem;align-items:start;background:var(--bg);padding:1.6rem 1.8rem;transition:background .2s}
-.talk:hover{background:var(--card)}
-.talk-n{font-family:var(--mono);font-size:.8rem;color:var(--acc);padding-top:.2rem}
-.talk p{color:var(--mut);font-size:.92rem;max-width:680px}
-.talk-tags{display:flex;gap:.4rem;flex-wrap:wrap;margin-top:.8rem}
-.talk-dur{font-family:var(--mono);font-size:.74rem;color:var(--mut);white-space:nowrap;padding-top:.25rem}
-
-/* ONDA */
-.onda{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem;position:relative}
-.phase{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:1.6rem;position:relative}
-.phase-l{font-family:var(--disp);font-size:3rem;font-weight:700;line-height:1;color:var(--acc);margin-bottom:1rem;letter-spacing:-.05em}
-.phase-k{font-family:var(--mono);font-size:.7rem;color:var(--mut);margin-bottom:.35rem;display:block}
-.phase p{color:var(--mut);font-size:.9rem}
-.phase .res{margin-top:1rem;padding-top:1rem;border-top:1px dashed var(--line2);font-size:.84rem;color:var(--txt)}
-.phase .res b{color:var(--acc);font-weight:500;font-family:var(--mono);font-size:.72rem;display:block;margin-bottom:.2rem}
-.onda-note{margin-top:1.5rem;font-family:var(--mono);font-size:.8rem;color:var(--mut)}
-
-/* AUDIENCE + STEPS */
-.two{display:grid;grid-template-columns:1fr 1fr;gap:3rem}
-.aud{list-style:none;display:grid;gap:.75rem}
-.aud li{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:1.1rem 1.25rem}
-.aud li b{display:block;font-weight:600;margin-bottom:.15rem}
-.aud li span{color:var(--mut);font-size:.9rem}
-.steps{list-style:none;counter-reset:s;display:grid;gap:1rem}
-.steps li{counter-increment:s;display:grid;grid-template-columns:44px 1fr;gap:1rem;align-items:start}
-.steps li::before{content:"0" counter(s);font-family:var(--mono);font-size:.8rem;color:var(--acc);border:1px solid var(--acc-l);background:var(--acc-d);
-  border-radius:10px;height:44px;display:grid;place-items:center}
-.steps b{display:block;font-weight:600;margin-bottom:.1rem}
-.steps span{color:var(--mut);font-size:.92rem}
-
-/* ABOUT */
-.about{display:grid;grid-template-columns:320px 1fr;gap:3.5rem;align-items:start}
-.photo{border-radius:16px;overflow:hidden;border:1px solid var(--line2);position:relative;aspect-ratio:4/5;background:var(--card)}
-.photo img{width:100%;height:100%;object-fit:cover}
-.photo figcaption{position:absolute;left:.8rem;bottom:.8rem;font-family:var(--mono);font-size:.7rem;background:rgba(7,9,10,.8);border:1px solid var(--line2);padding:.3rem .6rem;border-radius:6px;color:var(--mut)}
-.about-txt p{color:var(--mut);margin-bottom:1rem;font-size:1rem}
-.creds{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:.6rem;margin:1.6rem 0 1.8rem}
-.creds li{font-size:.88rem;color:var(--mut);padding:.7rem .9rem;border:1px solid var(--line);border-radius:10px;background:var(--card)}
-.creds li b{color:var(--txt);font-weight:600}
-.links{display:flex;gap:.6rem;flex-wrap:wrap}
-.links a{font-family:var(--mono);font-size:.78rem;color:var(--mut);text-decoration:none;border:1px solid var(--line2);padding:.45rem .8rem;border-radius:8px;transition:color .2s,border-color .2s}
-.links a:hover{color:var(--txt);border-color:var(--acc-l)}
-
-/* VIDEOS */
-.videos{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-bottom:2rem}
-.vid{text-decoration:none;background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;transition:border-color .2s,transform .2s}
-.vid:hover{border-color:var(--acc-l);transform:translateY(-2px)}
-.vid-th{aspect-ratio:16/9;position:relative;background:#0B1512}
-.vid-th img{width:100%;height:100%;object-fit:cover}
-.vid-th::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(0,0,0,.55))}
-.vid p{font-size:.86rem;font-weight:500;line-height:1.4;padding:.85rem .95rem}
-
-/* RESOURCE */
-.res-box{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;align-items:center;background:linear-gradient(140deg,rgba(0,229,160,.08),var(--card) 50%);
-  border:1px solid var(--acc-l);border-radius:18px;padding:2.5rem}
-.res-box h2{font-size:clamp(1.5rem,2.6vw,2rem)}
-.res-box .sub{margin-bottom:0}
-.form-note{font-size:.74rem;color:var(--mut);margin-top:.7rem;font-family:var(--mono)}
-
-/* FAQ */
-.faq{display:grid;gap:.75rem;max-width:860px}
-.faq details{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:0 1.3rem;transition:border-color .2s}
-.faq details[open]{border-color:var(--acc-l)}
-.faq summary{cursor:pointer;list-style:none;padding:1.15rem 0;font-weight:600;display:flex;justify-content:space-between;gap:1rem}
-.faq summary::-webkit-details-marker{display:none}
-.faq summary::after{content:"+";font-family:var(--mono);color:var(--acc);font-size:1.1rem;line-height:1}
-.faq details[open] summary::after{content:"−"}
-.faq details p{color:var(--mut);padding-bottom:1.2rem;font-size:.95rem}
-
-/* FINAL CTA */
-.final{text-align:center;padding:7rem 0;position:relative;isolation:isolate;border-bottom:none;overflow:hidden}
-.final h2{margin:0 auto 1rem;max-width:720px}
-.final .sub{margin:0 auto 2.2rem}
-.final .glow{top:auto;bottom:-420px;right:50%;transform:translateX(50%)}
-
-footer{border-top:1px solid var(--line);padding:2.2rem 0;font-size:.82rem;color:var(--mut)}
-.foot{display:flex;justify-content:space-between;gap:1.5rem;flex-wrap:wrap}
-footer a{color:var(--mut);text-decoration:none}footer a:hover{color:var(--txt)}
-
-/* MOBILE CTA BAR */
-.mbar{display:none}
-
-/* DOPPLER (form externo) */
-[data-dp-form] *{font-family:var(--sans)!important}
-[data-dp-form] div,[data-dp-form] form,[data-dp-form] section{background:transparent!important;border:none!important;box-shadow:none!important}
-[data-dp-form] h1,[data-dp-form] h2,[data-dp-form] h3,[data-dp-form] h4,
-[data-dp-form] [class*="legality"],[data-dp-form] [class*="share"],[data-dp-form] [class*="social"],[data-dp-form] [class*="footer"],
-[data-dp-form] [class*="brand"],[data-dp-form] [class*="logo"],[data-dp-form] [class*="policy"],[data-dp-form] [class*="privac"],
-[data-dp-form] hr,[data-dp-form] img[src*="doppler"],[data-dp-form] form ~ *{display:none!important}
-[data-dp-form] input[type=text],[data-dp-form] input[type=email]{background:var(--bg)!important;border:1px solid var(--line2)!important;border-radius:8px!important;
-  padding:.8rem 1rem!important;color:var(--txt)!important;font-size:.92rem!important;width:100%!important;outline:none!important;margin-bottom:.7rem!important}
-[data-dp-form] input:focus{border-color:var(--acc)!important}
-[data-dp-form] label{color:var(--mut)!important;font-size:.8rem!important;display:block!important;margin-bottom:.3rem!important}
-[data-dp-form] input[type=checkbox]{accent-color:var(--acc)!important}
-[data-dp-form] button,[data-dp-form] input[type=submit]{background:var(--acc)!important;color:#04120C!important;border:none!important;border-radius:8px!important;
-  padding:.85rem 1.5rem!important;font-weight:600!important;font-size:.95rem!important;cursor:pointer!important;width:auto!important}
-
-/* RESPONSIVE */
-@media (max-width:960px){
-  .hero-grid,.two,.about,.res-box,.def{grid-template-columns:1fr}
-  .formats{grid-template-columns:1fr}
-  .onda{grid-template-columns:1fr 1fr}
-  .videos{grid-template-columns:1fr 1fr}
-  .strip-grid{grid-template-columns:1fr 1fr}
-  .stat:nth-child(2){border-right:none}.stat:nth-child(-n+2){border-bottom:1px solid var(--line)}
-  .about{gap:2rem}.photo{max-width:300px}
-  .nav-links{display:none}
-}
-@media (max-width:600px){
-  .hero{padding:3.5rem 0 3.5rem}
-  section{padding:4rem 0}
-  .onda,.videos,.creds{grid-template-columns:1fr}
-  .talk{grid-template-columns:1fr;gap:.4rem;padding:1.4rem}
-  .term-body{font-size:.74rem}
-  .res-box{padding:1.6rem}
-  header .btn{display:none}
-  .mbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:60;padding:.7rem 1rem calc(.7rem + env(safe-area-inset-bottom));
-    background:rgba(7,9,10,.92);backdrop-filter:blur(12px);border-top:1px solid var(--line)}
-  .mbar .btn{width:100%;justify-content:center}
-  footer{padding-bottom:6rem}
-}
-@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.term-body p{opacity:1}}
-</style>
+<link rel="stylesheet" href="/assets/site.css">
 
 <!-- Datos estructurados (Schema.org) — entidad, servicio, método y FAQ -->
 <script type="application/ld+json">
@@ -398,13 +166,7 @@ footer a{color:var(--mut);text-decoration:none}footer a:hover{color:var(--txt)}
 <header>
   <nav class="wrap" aria-label="Principal">
     <a href="/" class="logo" aria-label="Aprendeia, inicio">aprende<span>ia</span></a>
-    <ul class="nav-links">
-      <li><a href="#formatos">Formatos</a></li>
-      <li><a href="#charlas">Charlas</a></li>
-      <li><a href="#metodo-onda">Método ONDA</a></li>
-      <li><a href="#emiliano">Quién la da</a></li>
-      <li><a href="#faq">FAQ</a></li>
-    </ul>
+    <ul class="nav-links"><li><a href="/charlas/">Charlas</a></li><li><a href="/metodo-onda/">Método ONDA</a></li><li><a href="/guias/">Guías</a></li><li><a href="/speaker/">Speaker</a></li><li><a href="#faq">FAQ</a></li></ul>
     <a class="btn btn-sm" data-cta="nav" href="https://wa.me/5491125534340?text=Hola%20Emiliano%2C%20quiero%20coordinar%20una%20charla%20o%20capacitaci%C3%B3n%20online%20de%20Aprendeia." target="_blank" rel="noopener">Coordinar una charla</a>
   </nav>
 </header>
@@ -523,54 +285,60 @@ footer a{color:var(--mut);text-decoration:none}footer a:hover{color:var(--txt)}
       <article class="talk">
         <span class="talk-n">01</span>
         <div>
-          <h3>IA sin humo para dueños de PyMEs: por dónde empezar</h3>
+          <h3><a href="/charlas/ia-sin-humo-para-duenos-de-pymes/">IA sin humo para dueños de PyMEs: por dónde empezar</a></h3>
           <p>Qué puede hacer hoy la IA en una PyME, qué no, y cuál es el primer paso con impacto económico real. Para dejar de mirar herramientas y empezar a decidir.</p>
           <div class="talk-tags"><span class="chip">dueños</span><span class="chip">introductoria</span></div>
+          <a class="talk-link" href="/charlas/ia-sin-humo-para-duenos-de-pymes/">Ver temario completo →</a>
         </div>
         <span class="talk-dur">45–60 min</span>
       </article>
       <article class="talk">
         <span class="talk-n">02</span>
         <div>
-          <h3>Método ONDA: adoptar IA sin desordenar tu empresa</h3>
+          <h3><a href="/charlas/metodo-onda-adoptar-ia-sin-desordenar-tu-empresa/">Método ONDA: adoptar IA sin desordenar tu empresa</a></h3>
           <p>Las 4 fases para implementar IA de forma sostenible: Observar, Normar, Desarrollar y Autonomizar. Con ejemplos de operación real.</p>
           <div class="talk-tags"><span class="chip">dueños y directivos</span><span class="chip">metodología</span></div>
+          <a class="talk-link" href="/charlas/metodo-onda-adoptar-ia-sin-desordenar-tu-empresa/">Ver temario completo →</a>
         </div>
         <span class="talk-dur">60 min</span>
       </article>
       <article class="talk">
         <span class="talk-n">03</span>
         <div>
-          <h3>Procesos antes que herramientas: por qué tu IA no funciona</h3>
+          <h3><a href="/charlas/procesos-antes-que-herramientas/">Procesos antes que herramientas: por qué tu IA no funciona</a></h3>
           <p>La IA solo mejora lo que está escrito. Cómo documentar procesos críticos, asignar responsables y recién después automatizar.</p>
           <div class="talk-tags"><span class="chip">equipos</span><span class="chip">operaciones</span></div>
+          <a class="talk-link" href="/charlas/procesos-antes-que-herramientas/">Ver temario completo →</a>
         </div>
         <span class="talk-dur">45–60 min</span>
       </article>
       <article class="talk">
         <span class="talk-n">04</span>
         <div>
-          <h3>Empresa familiar + IA: profesionalizar sin perder la esencia</h3>
+          <h3><a href="/charlas/empresa-familiar-e-ia/">Empresa familiar + IA: profesionalizar sin perder la esencia</a></h3>
           <p>Roles, decisiones y dependencia del fundador. Cómo usar la IA como palanca de profesionalización en empresas familiares.</p>
           <div class="talk-tags"><span class="chip">empresas familiares</span><span class="chip">cámaras</span></div>
+          <a class="talk-link" href="/charlas/empresa-familiar-e-ia/">Ver temario completo →</a>
         </div>
         <span class="talk-dur">60 min</span>
       </article>
       <article class="talk">
         <span class="talk-n">05</span>
         <div>
-          <h3>Automatización mínima viable: tu primer proceso con IA</h3>
+          <h3><a href="/charlas/automatizacion-minima-viable/">Automatización mínima viable: tu primer proceso con IA</a></h3>
           <p>Cómo elegir un único proceso, probar con un piloto chico y medir antes y después en tiempo, costo y errores.</p>
           <div class="talk-tags"><span class="chip">equipos</span><span class="chip">práctica</span></div>
+          <a class="talk-link" href="/charlas/automatizacion-minima-viable/">Ver temario completo →</a>
         </div>
         <span class="talk-dur">60–90 min</span>
       </article>
       <article class="talk">
         <span class="talk-n">06</span>
         <div>
-          <h3>Que la IA te recomiende: visibilidad de tu negocio en ChatGPT y Google</h3>
+          <h3><a href="/charlas/visibilidad-en-ia-geo-para-pymes/">Que la IA te recomiende: visibilidad de tu negocio en ChatGPT y Google</a></h3>
           <p>Cómo cambian las búsquedas con la IA generativa y qué hacer para que tu empresa aparezca cuando un cliente le pregunta a una IA.</p>
           <div class="talk-tags"><span class="chip">marketing</span><span class="chip">GEO</span></div>
+          <a class="talk-link" href="/charlas/visibilidad-en-ia-geo-para-pymes/">Ver temario completo →</a>
         </div>
         <span class="talk-dur">45–60 min</span>
       </article>
@@ -610,7 +378,7 @@ footer a{color:var(--mut);text-decoration:none}footer a:hover{color:var(--txt)}
         <div class="res"><b>resultado</b>IA sostenible y un dueño enfocado en estrategia.</div>
       </article>
     </div>
-    <p class="onda-note">→ Descargá la hoja de ruta completa más abajo.</p>
+    <p class="onda-note">→ <a href="/metodo-onda/" style="color:var(--acc)">Ver el método completo con el checklist de cada fase</a> · o descargá la hoja de ruta más abajo.</p>
   </div>
 </section>
 
@@ -666,6 +434,7 @@ footer a{color:var(--mut);text-decoration:none}footer a:hover{color:var(--txt)}
         <a href="https://www.linkedin.com/in/emilianobugliolo/" target="_blank" rel="noopener me">LinkedIn ↗</a>
         <a href="https://www.youtube.com/@emibugliolo" target="_blank" rel="noopener me">YouTube ↗</a>
         <a href="https://www.instagram.com/emibugliolo/" target="_blank" rel="noopener me">Instagram ↗</a>
+        <a href="/speaker/" style="color:var(--acc);border-color:var(--acc-l)">Kit para organizadores →</a>
       </div>
     </div>
   </div>
@@ -716,6 +485,16 @@ footer a{color:var(--mut);text-decoration:none}footer a:hover{color:var(--txt)}
   </div>
 </section>
 
+<!-- GUÍAS -->
+<section id="guias">
+  <div class="wrap">
+    <span class="label">// guías gratuitas</span>
+    <h2>Respuestas directas, sin tecnicismos.</h2>
+    <p class="sub">Las preguntas que más se repiten en las charlas, respondidas por escrito.</p>
+    <div class="cards-grid" style="grid-template-columns:repeat(2,1fr)"><a class="lcard" href="/guias/como-implementar-ia-en-una-pyme/"><span class="label">// guía</span><h3>Cómo implementar inteligencia artificial en una PyME: guía en 4 fases</h3><p>Guía práctica para implementar IA en una PyME sin desordenar la operación: diagnóstico, documentación de procesos, piloto medido y autonomía del equipo. Método ONDA.</p><span class="more">Leer →</span></a><a class="lcard" href="/guias/ia-en-empresas-familiares/"><span class="label">// guía</span><h3>IA en empresas familiares: cómo profesionalizar sin perder la esencia</h3><p>Cómo usar la inteligencia artificial para profesionalizar una empresa familiar: roles claros, decisiones con datos y menor dependencia del fundador.</p><span class="more">Leer →</span></a><a class="lcard" href="/guias/como-elegir-una-capacitacion-de-ia-para-empresas/"><span class="label">// guía</span><h3>Cómo elegir una capacitación de IA para tu empresa: 7 criterios</h3><p>Siete criterios para elegir una capacitación o charla de inteligencia artificial para empresas y PyMEs, y qué preguntarle al capacitador antes de contratar.</p><span class="more">Leer →</span></a><a class="lcard" href="/guias/que-es-geo-y-como-hacer-que-la-ia-recomiende-tu-negocio/"><span class="label">// guía</span><h3>Qué es GEO y cómo lograr que ChatGPT recomiende tu negocio</h3><p>Qué es GEO (Generative Engine Optimization), en qué se diferencia del SEO y un checklist de 10 puntos para que una PyME aparezca en respuestas de ChatGPT, Gemini y Perplexity.</p><span class="more">Leer →</span></a></div>
+  </div>
+</section>
+
 <!-- FAQ -->
 <section id="faq">
   <div class="wrap">
@@ -750,7 +529,7 @@ footer a{color:var(--mut);text-decoration:none}footer a:hover{color:var(--txt)}
 <footer>
   <div class="wrap foot">
     <p>© <span id="y">2026</span> Aprendeia · Charlas y capacitaciones online de IA · por <a href="https://www.emibugliolo.com/" target="_blank" rel="noopener">Emiliano Bugliolo</a></p>
-    <p>Actualizado: <time datetime="2026-11-25">noviembre 2026</time> · <a href="/llms.txt">llms.txt</a></p>
+    <p><a href="/charlas/">Charlas</a> · <a href="/metodo-onda/">Método ONDA</a> · <a href="/guias/">Guías</a> · <a href="/speaker/">Kit de speaker</a> · <a href="/llms.txt">llms.txt</a> · Actualizado <time datetime="2026-11-25">nov 2026</time></p>
   </div>
 </footer>
 
@@ -761,7 +540,7 @@ footer a{color:var(--mut);text-decoration:none}footer a:hover{color:var(--txt)}
 <script>
 document.getElementById('y').textContent=new Date().getFullYear();
 document.querySelectorAll('[data-cta]').forEach(function(a){a.addEventListener('click',function(){
-  if(window.gtag)gtag('event','generate_lead',{method:'whatsapp',cta_position:a.dataset.cta});
+  if(window.gtag)gtag('event','generate_lead',{method:'whatsapp',cta_position:a.dataset.cta,page_path:location.pathname});
 });});
 
 </script>

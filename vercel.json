@@ -1,0 +1,9 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": true,
+  "headers": [
+    { "source": "/assets/(.*)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=604800" }] },
+    { "source": "/(.*)\\.(webp|jpg|png|pdf)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=2592000" }] },
+    { "source": "/(llms.txt|llms-full.txt)", "headers": [{ "key": "Content-Type", "value": "text/plain; charset=utf-8" }] }
+  ]
+}
