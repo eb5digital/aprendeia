@@ -153,9 +153,7 @@
 }
 </script>
 
-<!-- Formulario Doppler (defer: no bloquea el render) -->
-<link rel="stylesheet" href="https://cdn.fromdoppler.com/formgenerator/latest/styles.css?26937409" media="print" onload="this.media='all'">
-<script defer src="https://cdn.fromdoppler.com/formgenerator/latest/vendor.js?26937409"></script>
+<script defer src="/assets/lead-form.js"></script>
 
 <!-- Google tag -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-L7RQEJMF4K"></script>
@@ -475,11 +473,29 @@
       <div>
         <span class="label">// recurso gratuito</span>
         <h2>Hoja de Ruta del Método ONDA.</h2>
-        <p class="sub">Las 4 fases con el checklist de cada una, en PDF. Es el mismo punto de partida que se usa en las capacitaciones.</p>
+        <p class="sub">Las 4 fases con el checklist de cada una, en PDF. Es el mismo punto de partida que se usa en las capacitaciones. Dejá tus datos y descargala al instante.</p>
       </div>
       <div>
-        <div data-dp-form="G5VvMx%2bpMg9qnsGzLxUUuA%3d%3d"></div>
-        <p class="form-note">Sin spam. Solo recursos nuevos.</p>
+        <form class="lead-form" id="lead-form" novalidate>
+          <div class="field"><label for="lf-nombre">Nombre y apellido</label>
+            <input id="lf-nombre" name="nombre" type="text" autocomplete="name" required maxlength="120"></div>
+          <div class="field"><label for="lf-email">Email</label>
+            <input id="lf-email" name="email" type="email" autocomplete="email" inputmode="email" required maxlength="160"></div>
+          <div class="field"><label for="lf-tel">WhatsApp / teléfono</label>
+            <input id="lf-tel" name="telefono" type="tel" autocomplete="tel" inputmode="tel" required maxlength="30" placeholder="+54 9 11 ..."></div>
+          <div class="hp" aria-hidden="true"><label for="lf-web">No completar</label><input id="lf-web" name="web" type="text" tabindex="-1" autocomplete="off"></div>
+          <p class="consent">Al enviar aceptás que Aprendeia use estos datos para enviarte el recurso y contactarte sobre charlas y capacitaciones. No los compartimos con terceros. Podés pedir la baja cuando quieras.</p>
+          <button class="btn" type="submit">Recibir la Hoja de Ruta →</button>
+          <p class="form-msg" role="status" aria-live="polite"></p>
+        </form>
+        <div class="lead-ok" id="lead-ok" tabindex="-1">
+          <h3>¡Listo! Ya está tu Hoja de Ruta.</h3>
+          <p>Descargala ahora. Si querés llevar el Método ONDA a tu equipo o evento, escribime por WhatsApp.</p>
+          <div class="row">
+            <a class="btn" href="/metodo-onda-hoja-de-ruta.pdf" download data-dl>Descargar PDF ↓</a>
+            <a class="btn btn-ghost" data-cta="post-form" href="https://wa.me/5491125534340?text=Hola%20Emiliano%2C%20descargu%C3%A9%20la%20Hoja%20de%20Ruta%20del%20M%C3%A9todo%20ONDA%20y%20quiero%20coordinar%20una%20charla." target="_blank" rel="noopener">Escribir por WhatsApp</a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
