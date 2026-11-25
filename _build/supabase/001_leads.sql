@@ -44,3 +44,15 @@ returns text language sql stable security invoker set search_path = ''
 as $$ select 'ok'::text $$;
 revoke all on function public.ping() from public;
 grant execute on function public.ping() to anon;
+
+-- 003: aviso por email de cada contacto nuevo (trigger → Edge Function nuevo-lead → Resend)
+create extension if not exists pg_net with schema extensions;
+alter table public.leads add column if not exists notificado_at timestamptz;
+create or replace function public.notify_new_lead() returns trigger language plpgsql security definer set search_path = ''
+as $$ begin
+  perform net.http_post(url := 'https://tglzjejpyipxundiszrv.supabase.co/functions/v1/nuevo-lead',
+    headers := jsonb_build_object('Content-Type','application/json'), body := jsonb_build_object('id', new.id));
+  return new; end; $$;
+revoke all on function public.notify_new_lead() from public, anon, authenticated;
+drop trigger if exists leads_notify on public.leads;
+create trigger leads_notify after insert on public.leads for each row execute function public.notify_new_lead();
