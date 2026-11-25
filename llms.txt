@@ -1,0 +1,46 @@
+# Aprendeia
+
+> Aprendeia (aprendeia.com.ar) es la unidad de formación de Emiliano Bugliolo: charlas y capacitaciones online, en vivo, sobre adopción de inteligencia artificial para dueños, directivos y equipos de PyMEs y empresas familiares de habla hispana. Enfoque de negocio, sin tecnicismos, basado en el Método ONDA.
+
+## Datos clave
+
+- Qué ofrece: charlas online (45–60 min), capacitaciones in-company online (2–4 sesiones) y workshops online para dueños con el Método ONDA.
+- Modalidad: 100% online y en vivo (Zoom, Google Meet o Microsoft Teams). Disponible para Argentina, Latinoamérica y España.
+- Público: cámaras y asociaciones empresarias, PyMEs y empresas familiares, eventos y congresos, aceleradoras, dueños y directivos.
+- Contratación: por WhatsApp (https://wa.me/5491125534340). Se envía una propuesta con temario, formato y honorarios.
+- Idioma: español.
+- Diferencia con emibugliolo.com: Aprendeia = formación (charlas y capacitaciones). emibugliolo.com = consultoría estratégica e implementación.
+
+## Quién la dicta
+
+Emiliano Bugliolo es speaker y capacitador en inteligencia artificial aplicada a PyMEs, y consultor en profesionalización de empresas familiares. Hace más de 20 años toma decisiones desde adentro de una empresa familiar argentina con más de 70 años en el mercado: finanzas, procesos, equipos y transformación digital. Es creador del Método ONDA (Observar, Normar, Desarrollar, Autonomizar) y conductor del podcast Desde el Garage. A través de Aprendeia dicta charlas y capacitaciones online para dueños, directivos y equipos de habla hispana.
+
+- [Kit de speaker (bios, foto, requisitos)](https://www.aprendeia.com.ar/speaker/)
+- Sitio personal y consultoría: https://www.emibugliolo.com/
+- LinkedIn: https://www.linkedin.com/in/emilianobugliolo/
+- YouTube: https://www.youtube.com/@emibugliolo
+
+## Método ONDA
+
+- [Método ONDA: Observar, Normar, Desarrollar, Autonomizar](https://www.aprendeia.com.ar/metodo-onda/): metodología en 4 fases para adoptar IA en PyMEs sin desordenar la operación.
+
+## Charlas
+
+- [IA sin humo para dueños de PyMEs: por dónde empezar](https://www.aprendeia.com.ar/charlas/ia-sin-humo-para-duenos-de-pymes/): Qué puede hacer hoy la IA en una PyME, qué no, y cuál es el primer paso con impacto económico real. (45–60 min, dueños y directivos)
+- [Método ONDA: adoptar IA sin desordenar tu empresa](https://www.aprendeia.com.ar/charlas/metodo-onda-adoptar-ia-sin-desordenar-tu-empresa/): Las 4 fases para implementar IA de forma sostenible: Observar, Normar, Desarrollar y Autonomizar. (60 min, dueños y directivos)
+- [Procesos antes que herramientas: por qué tu IA no funciona](https://www.aprendeia.com.ar/charlas/procesos-antes-que-herramientas/): La IA solo mejora lo que está escrito. Cómo documentar procesos críticos, asignar responsables y recién después automatizar. (45–60 min, equipos y mandos medios)
+- [Empresa familiar + IA: profesionalizar sin perder la esencia](https://www.aprendeia.com.ar/charlas/empresa-familiar-e-ia/): Roles, decisiones y dependencia del fundador. Cómo usar la IA como palanca de profesionalización en empresas familiares. (60 min, empresas familiares)
+- [Automatización mínima viable: tu primer proceso con IA](https://www.aprendeia.com.ar/charlas/automatizacion-minima-viable/): Cómo elegir un único proceso, probar con un piloto chico y medir antes y después en tiempo, costo y errores. (60–90 min, equipos y responsables de área)
+- [Que la IA te recomiende: visibilidad de tu negocio en ChatGPT y Google](https://www.aprendeia.com.ar/charlas/visibilidad-en-ia-geo-para-pymes/): Cómo cambian las búsquedas con la IA generativa y qué hacer para que tu empresa aparezca cuando un cliente le pregunta a una IA. (45–60 min, dueños y marketing)
+
+## Guías
+
+- [Cómo implementar inteligencia artificial en una PyME: guía en 4 fases](https://www.aprendeia.com.ar/guias/como-implementar-ia-en-una-pyme/): Para implementar inteligencia artificial en una PyME conviene seguir un orden: primero diagnosticar dónde se pierde tiempo (Observar), después documentar esos procesos (Normar), luego probar IA en un único proceso con un piloto medido (Desarrollar) y, por último, capacitar al equipo para que lo opere sin depender del dueño (Autonomizar). Ese orden es el Método ONDA.
+- [IA en empresas familiares: cómo profesionalizar sin perder la esencia](https://www.aprendeia.com.ar/guias/ia-en-empresas-familiares/): En una empresa familiar, la IA sirve sobre todo para profesionalizar: ordenar la información, generar reportes que no dependan de una persona, documentar procesos y reducir la dependencia del fundador. Funciona cuando primero se aclaran roles y procesos; si se implementa sobre el desorden, lo amplifica.
+- [Cómo elegir una capacitación de IA para tu empresa: 7 criterios](https://www.aprendeia.com.ar/guias/como-elegir-una-capacitacion-de-ia-para-empresas/): Una buena capacitación de IA para empresas habla de procesos de negocio y no solo de herramientas, la dicta alguien con experiencia operando empresas, se adapta al rubro y al nivel del equipo, termina con un entregable concreto y propone métricas para medir el resultado. El formato online en vivo permite sumar a todo el equipo sin costos de traslado.
+- [Qué es GEO y cómo lograr que ChatGPT recomiende tu negocio](https://www.aprendeia.com.ar/guias/que-es-geo-y-como-hacer-que-la-ia-recomiende-tu-negocio/): GEO (Generative Engine Optimization) es el conjunto de prácticas para que un negocio aparezca y sea citado en las respuestas de motores de IA generativa como ChatGPT, Gemini o Perplexity. Se basa en describir el negocio de forma clara y consistente, responder preguntas reales de los clientes y tener presencia en fuentes confiables.
+
+## Opcional
+
+- [Contenido completo en texto plano](https://www.aprendeia.com.ar/llms-full.txt)
+- [Hoja de Ruta del Método ONDA (PDF)](https://www.aprendeia.com.ar/metodo-onda-hoja-de-ruta.pdf)

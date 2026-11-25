@@ -1,9 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://www.aprendeia.com.ar/</loc>
-    <lastmod>2026-05-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
+  <url><loc>https://www.aprendeia.com.ar/</loc><lastmod>2026-11-25</lastmod><priority>1.0</priority></url>
+  <url><loc>https://www.aprendeia.com.ar/charlas/</loc><lastmod>2026-11-25</lastmod><priority>0.9</priority></url>
+  <url><loc>https://www.aprendeia.com.ar/metodo-onda/</loc><lastmod>2026-11-25</lastmod><priority>0.9</priority></url>
+  <url><loc>https://www.aprendeia.com.ar/speaker/</loc><lastmod>2026-11-25</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.aprendeia.com.ar/guias/</loc><lastmod>2026-11-25</lastmod><priority>0.7</priority></url>
+  <url><loc>https://www.aprendeia.com.ar/charlas/ia-sin-humo-para-duenos-de-pymes/</loc><lastmod>2026-11-25</lastmod><priority>0.7</priority></url>
+  <url><loc>https://www.aprendeia.com.ar/charlas/metodo-onda-adoptar-ia-sin-desordenar-tu-empresa/</loc><lastmod>2026-11-25</lastmod><priority>0.7</priority></url>
+  <url><loc>https://www.aprendeia.com.ar/charlas/procesos-antes-que-herramientas/</loc><lastmod>2026-11-25</lastmod><priority>0.7</priority></url>
+  <url><loc>https://www.aprendeia.com.ar/charlas/empresa-familiar-e-ia/</loc><lastmod>2026-11-25</lastmod><priority>0.7</priority></url>
+  <url><loc>https://www.aprendeia.com.ar/charlas/automatizacion-minima-viable/</loc><lastmod>2026-11-25</lastmod><priority>0.7</priority></url>
+  <url><loc>https://www.aprendeia.com.ar/charlas/visibilidad-en-ia-geo-para-pymes/</loc><lastmod>2026-11-25</lastmod><priority>0.7</priority></url>
+  <url><loc>https://www.aprendeia.com.ar/guias/como-implementar-ia-en-una-pyme/</loc><lastmod>2026-11-25</lastmod><priority>0.7</priority></url>
+  <url><loc>https://www.aprendeia.com.ar/guias/ia-en-empresas-familiares/</loc><lastmod>2026-11-25</lastmod><priority>0.7</priority></url>
+  <url><loc>https://www.aprendeia.com.ar/guias/como-elegir-una-capacitacion-de-ia-para-empresas/</loc><lastmod>2026-11-25</lastmod><priority>0.7</priority></url>
+  <url><loc>https://www.aprendeia.com.ar/guias/que-es-geo-y-como-hacer-que-la-ia-recomiende-tu-negocio/</loc><lastmod>2026-11-25</lastmod><priority>0.7</priority></url>
 </urlset>
