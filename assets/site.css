@@ -189,20 +189,23 @@ footer a{color:var(--mut);text-decoration:none}footer a:hover{color:var(--txt)}
 /* MOBILE CTA BAR */
 .mbar{display:none}
 
-/* DOPPLER (form externo) */
-[data-dp-form] *{font-family:var(--sans)!important}
-[data-dp-form] div,[data-dp-form] form,[data-dp-form] section{background:transparent!important;border:none!important;box-shadow:none!important}
-[data-dp-form] h1,[data-dp-form] h2,[data-dp-form] h3,[data-dp-form] h4,
-[data-dp-form] [class*="legality"],[data-dp-form] [class*="share"],[data-dp-form] [class*="social"],[data-dp-form] [class*="footer"],
-[data-dp-form] [class*="brand"],[data-dp-form] [class*="logo"],[data-dp-form] [class*="policy"],[data-dp-form] [class*="privac"],
-[data-dp-form] hr,[data-dp-form] img[src*="doppler"],[data-dp-form] form ~ *{display:none!important}
-[data-dp-form] input[type=text],[data-dp-form] input[type=email]{background:var(--bg)!important;border:1px solid var(--line2)!important;border-radius:8px!important;
-  padding:.8rem 1rem!important;color:var(--txt)!important;font-size:.92rem!important;width:100%!important;outline:none!important;margin-bottom:.7rem!important}
-[data-dp-form] input:focus{border-color:var(--acc)!important}
-[data-dp-form] label{color:var(--mut)!important;font-size:.8rem!important;display:block!important;margin-bottom:.3rem!important}
-[data-dp-form] input[type=checkbox]{accent-color:var(--acc)!important}
-[data-dp-form] button,[data-dp-form] input[type=submit]{background:var(--acc)!important;color:#04120C!important;border:none!important;border-radius:8px!important;
-  padding:.85rem 1.5rem!important;font-weight:600!important;font-size:.95rem!important;cursor:pointer!important;width:auto!important}
+/* FORMULARIO DE CONTACTO (propio) */
+.lead-form{display:grid;gap:.85rem}
+.field label{display:block;font-size:.8rem;color:var(--mut);margin-bottom:.3rem}
+.field input{width:100%;background:var(--bg);border:1px solid var(--line2);border-radius:8px;padding:.8rem 1rem;color:var(--txt);
+  font:inherit;font-size:.95rem;outline:none;transition:border-color .2s}
+.field input:focus{border-color:var(--acc)}
+.field input[aria-invalid=true]{border-color:#E5484D}
+.lead-form .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.consent{font-size:.74rem;color:var(--mut);line-height:1.5}
+.lead-form .btn{justify-content:center;border:none;cursor:pointer;font:inherit;font-weight:600}
+.lead-form .btn[disabled]{opacity:.6;cursor:wait}
+.form-msg{font-size:.86rem;min-height:1.2em}
+.form-msg.err{color:#FF8A8A}
+.lead-ok{display:none;background:var(--bg);border:1px solid var(--acc-l);border-radius:12px;padding:1.4rem}
+.lead-ok h3{color:var(--acc)}
+.lead-ok p{color:var(--mut);font-size:.92rem;margin-bottom:1rem}
+.lead-ok .row{display:flex;gap:.6rem;flex-wrap:wrap}
 
 /* RESPONSIVE */
 @media (max-width:960px){
